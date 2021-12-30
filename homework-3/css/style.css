@@ -12,14 +12,20 @@ body {
     font-size: 1.05em; /*13pt*/
 }
 
-.author {
+main > h2,
+main > p {
     font-size: 1.2em; /*14pt*/
 }
-.author h1 {
+main > h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 1.2em; /*14pt*/
+    /*font-size: 1.2em; 14pt*/
 }
+
+main > p {
+    font-family: 'Marck Script', cursive;
+}
+
 
 .book-5 h2,
 .book-5 h3 {
@@ -32,7 +38,4 @@ body {
 .book-5 li,
 .book-5 section p {
     font-size: 1.05em; /*13pt*/
-}
-.book-5 section p .underline {
-    text-decoration: underline;
 }
