@@ -1,55 +1,57 @@
 @font-face {
     font-family: 'Butler';
-    src: local('Butler'), url('../font/butler/Butler.woff2') format('woff2'), url('../font/butler/Butler.woff') format('woff'), url('../font/butler/Butler.ttf') format('truetype');
-    font-weight: 400;
+    src: local('Butler'), url('../font/butler/Butlerlight.woff2') format('woff2'), url('../font/butler/Butlerlight.woff') format('woff'), url('../font/butler/Butlerlight.ttf') format('truetype');
+    font-weight: 300;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Roboto-Bold';
+    font-family: 'Roboto';
     src: local('Roboto-Bold'), url('../font/butler/Roboto-Bold.woff2') format('woff2'), url('../font/butler/Roboto-Bold.woff') format('woff'), url('../font/butler/Roboto-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
+body {
+    background: #FFFFFF;
+    margin:0;
+    padding: 0;
+}
+
 section {
     height: 100vh;
-    max-height: 100vh;
+    min-height: 700px;
 }
 #main {
+    text-align: center;
     position: relative;
-    background-image: url(../image/main.jpg);
-    background-position: 50% 60%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 15vh 13vw;
+    top: 50%;
+    left: 50%;
+}
+#main-img {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75%;
     width: auto;
-    height: 70vh;
+    min-width: 70%;
 }
 #main-title {
-    position: absolute;
-    margin: 0;
-    top: 50%;
-    left: 50%;
-    width: 55%;
-    height: 50%;
-    transform: translate(-50%, -50%);
+    display: inline-block;
     background: #FFFFFF;
-    text-align: center;
-}
-#main-title > * {
-    position: absolute;
-    margin: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 2rem 3rem;
+    z-index: 1;
 }
 #main-title h1 {
     font-family: 'Butler', sans-serif;
+    font-weight: 300;
     font-size: 5.5em;
     width: 100%;
 }
 #main-title h2 {
-    font-family: 'Roboto-Bold', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     font-size: 18px;
     top: 75%;
 }
