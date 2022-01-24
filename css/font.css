@@ -1,7 +1,19 @@
 @font-face {
     font-family: 'Butler';
+    src: local('Butler'), url('../font/butler/Butlerultralight.woff2') format('woff2'), url('../font/butler/Butlerultralight.woff') format('woff'), url('../font/butler/Butlerultralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Butler';
     src: local('Butler'), url('../font/butler/Butlerlight.woff2') format('woff2'), url('../font/butler/Butlerlight.woff') format('woff'), url('../font/butler/Butlerlight.ttf') format('truetype');
     font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'), url('../font/Roboto/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
     font-style: normal;
 }
 @font-face {
