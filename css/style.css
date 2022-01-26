@@ -1,9 +1,15 @@
 * {
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     margin-block-start: 0em;
     margin-block-end: 0em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 body {
@@ -15,6 +21,7 @@ body {
 section {
     height: 100vh;
     min-height: 700px;
+    border: red 1px solid;
 }
 
 /*page 1*/
@@ -167,4 +174,99 @@ section {
     content: "";
     display: block;
     clear: both;
+}
+
+/*page 4*/
+#testimonials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#testimonials h2 {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1em;
+    top: -4rem;
+}
+
+#testimonial-left,
+#testimonial-right {
+    flex: 1;
+}
+
+#testimonial-left {
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#testimonial-left ul {
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 0px;
+    align-items: stretch;
+    justify-content: space-around;
+    height: 85vh;
+}
+
+#testimonial-left ul li {
+    display: inline-block;
+    list-style-type: none;
+    transform: rotate(270deg) translate(0, 100%);
+    /*transform-origin: bottom left;*/
+}
+
+#testimonial-left ul li h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+#testimonial-left ul li a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #000;
+}
+
+#testimonial-left #testimonial-container-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#testimonial-left img {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#testimonial-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15vh 17.5%;
+    max-width: 15vw;
+}
+
+#testimonial-right blockquote {
+    flex: 1;
+    font-family: 'Butler', sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+#testimonial-right img {
+    flex: 1;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
