@@ -12,7 +12,9 @@ body {
     background: #FFFFFF;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
+
 section {
     height: 100vh;
     min-height: 700px;
@@ -176,12 +178,13 @@ section {
     display: grid;
     grid-template-columns: 2fr [pic1] 7em 1fr [pic2] 1em 1fr [pic3] 4.5em;
     grid-template-rows: 10vh [row1] 50vh [main-row] 6em [text-row];
-    grid-template-areas: 
+    grid-template-areas:
         "designer1-img . designer-title . . ."
         "designer1-img . designer2-img . designer3-img ."
         "designer1 . designer2 . designer3 .";
     padding-top: 12vh;
 }
+
 #designers .title {
     display: inline;
     grid-area: designer-title;
@@ -192,25 +195,32 @@ section {
     margin-block-end: 0;
     writing-mode: vertical-rl;
 }
+
 #designer1-img {
     grid-area: designer1-img;
 }
+
 #designer2-img {
     grid-area: designer2-img;
 }
+
 #designer3-img {
     grid-area: designer3-img;
 }
+
 #designer1 {
     grid-area: designer1;
     justify-self: center;
 }
+
 #designer2 {
     grid-area: designer2;
 }
+
 #designer3 {
     grid-area: designer3;
 }
+
 #designers img.designer-img {
 /*page 4*/
 #testimonials {
@@ -280,16 +290,19 @@ section {
     height: 100%;
     max-height: 100%;
     object-fit: cover;
-	object-position: center;
+    object-position: center;
 }
+
 #designers .designer-description {
     font-family: 'Roboto', sans-serif;
 }
-#designers .designer-description > h3 {
+
+#designers .designer-description>h3 {
     text-transform: uppercase;
     font-weight: 700;
 }
-#designers .designer-description > p {
+
+#designers .designer-description>p {
     font-weight: 400;
 }
     object-position: center;
@@ -316,5 +329,89 @@ section {
     max-width: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+/*page 5*/
+#strong-points {
+    position: relative;
+}
+#strong-points h2.title {
+    position: absolute;
+    top: calc(30vh - 5.25rem);
+    left: 33vw;
+    transform: rotate(270deg);
+    transform-origin: left bottom;
+}
+#strong-points .container {
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    padding-top: 30vh;
+    padding-bottom: 15vh;
+    overflow-x: none;
+}
+
+#strong-points .carousel {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    left: -2%;
+    white-space: nowrap;
+}
+
+#strong-points .carousel>div {
+    display: inline-block;
+    width: 24vw;
+    height: 100%;
+    vertical-align: text-top;
+}
+
+#strong-points .carousel>div:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+#strong-points .carousel>div.list {
+    position: relative;
+    padding: 2rem 2.5rem;
+}
+
+#strong-points .carousel>div.list.selected {
+    margin: 0 9rem;
+}
+
+#strong-points .carousel>div.list h3 {
+    position: absolute;
+    top: -1.5em;
+    left: -0.25em;
+    font-family: 'Butler', sans-serif;
+    font-weight: 300;
+    font-size: 5.75rem;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+#strong-points .carousel>div.list ul {
+    padding-inline-start: 0px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+#strong-points .carousel>div.list ul li {
+    list-style-type: none;
+    font-family: 'Butler', sans-serif;
+    font-weight: 300;
+    font-size: 2.125rem;
+    line-height: normal;
+}
+
+#strong-points .carousel>div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#strong-points .carousel:after {
+    clear: both;
 }
 }
