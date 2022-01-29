@@ -10,20 +10,16 @@
 
 body {
     background: #FFFFFF;
-    margin: 0;
-    padding: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    color: #000;
     overflow-x: hidden;
 }
 
-main {
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
 section {
-    min-height: 800px;
     height: 100vh;
-    width: 100%;
+    min-height: 37rem;
     border: red 1px solid;
 }
 
@@ -35,6 +31,58 @@ h2 {
 
 /*page 1*/
 #main {
+    position: relative;
+    width: 100%;
+}
+
+#main-img {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+#main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 40vh;
+    background: #fff;
+    font-size: 5.5rem;
+}
+
+#main-title h1 {
+    margin: 0;
+    font-family: 'Butler', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+#main-title h2 {
+    margin-bottom: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1em;
+}
+
+/*}*/
+
+/*tablet*/
+@media screen and (min-width: 620px) {
+    :root {
+        font-size: 16px;
+    }
+}
+
+/*page 1*/
+/*#main {
     text-align: center;
     position: relative;
     line-height: 100vh;
