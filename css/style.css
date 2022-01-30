@@ -1,10 +1,14 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 
 body {
     background: #FFFFFF;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
@@ -19,6 +23,7 @@ section {
     position: relative;
     line-height: 100vh;
 }
+
 #main-img {
     position: absolute;
     margin: 0;
@@ -29,6 +34,7 @@ section {
     width: auto;
     min-width: 70%;
 }
+
 #main-title {
     display: inline-block;
     vertical-align: middle;
@@ -39,6 +45,7 @@ section {
     font-size: 5.5rem;
     padding: 1.5em 0.5em 1.4em;
 }
+
 #main-title h1 {
     margin: 0;
     font-family: 'Butler', sans-serif;
@@ -46,10 +53,11 @@ section {
     font-size: 1em;
     line-height: 1em;
 }
+
 #main-title h2 {
     position: absolute;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
     margin: 0;
     margin-top: 2em;
     font-family: 'Roboto', sans-serif;
@@ -64,8 +72,9 @@ section {
     padding-right: 8.5vw;
     position: relative;
 }
+
 #biography h2 {
-    display:block;
+    display: block;
     position: absolute;
     bottom: 4rem;
     right: 0;
@@ -76,33 +85,39 @@ section {
     font-size: 1.125rem;
     transform: rotate(270deg);
 }
-#biography > div {
+
+#biography>div {
     width: 50%;
     float: left;
 }
-#biography-right {
+
+#biography-img {
     overflow: hidden;
     height: calc(100vh - 4rem);
 }
-#biography-right > img {
+
+#biography-img>img {
     display: block;
     min-width: 100%;
     min-height: 100%;
     max-width: 120%;
     max-height: 150%;
 }
-#biography-left {
+
+#biography-description {
     padding-left: 8.5vw;
 }
-#biography-left > h3 {
+
+#biography-description>h3 {
     margin-top: 20vh;
     margin-bottom: 0.75em;
     font-family: 'Butler', sans-serif;
     font-weight: 300;
     font-size: 5.5rem;
 }
-#biography-left > p,
-#biography-left > span.role {
+
+#biography-description>p,
+#biography-description>.role li {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 1.125rem;
@@ -110,7 +125,17 @@ section {
     margin-block-start: 0em;
     margin-block-end: 0em;
 }
-#biography-left blockquote {
+
+#biography-description>.role li {
+    display: inline;
+    list-style-type: none;
+}
+
+#biography-description>.role li:not(:last-child):after {
+    content: " /";
+}
+
+#biography-description blockquote {
     font-family: 'Butler', sans-serif;
     display: block;
     margin-block-start: 0em;
@@ -120,17 +145,26 @@ section {
     font-weight: 200;
     font-size: 2rem;
 }
-#biography-left blockquote::before {
+
+#biography-description blockquote::before {
     content: "\201c";
 }
-#biography-left blockquote::after {
+
+#biography-description blockquote::after {
     content: "\201d";
 }
-#biography-left > span.dash {
+
+#biography-description>span.dash {
     display: block;
     margin-top: 1.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 2rem;
     line-height: 4rem;
+}
+
+#biography::after {
+    content: "";
+    display: block;
+    clear: both;
 }
