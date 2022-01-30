@@ -1,7 +1,12 @@
+:root {
+    font-size: 12px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: 0;
     margin-block-start: 0em;
     margin-block-end: 0em;
     margin-inline-start: 0px;
@@ -10,7 +15,9 @@
 
 body {
     background: #FFFFFF;
-    border: 0;
+}
+
+body {
     font-family: 'Roboto', sans-serif;
     background: #fff;
     color: #000;
@@ -30,6 +37,8 @@ h2 {
     font-size: 1.125rem;
 }
 
+/*mobile devices: from 1 to 575px*/
+/*@media screen and (min-width: 1px) {*/
 /*page 1*/
 #main {
     position: relative;
@@ -77,15 +86,109 @@ h2 {
     line-height: 1em;
 }
 
+/*page 2*/
+#biography {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 4rem;
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+
+#biography h2 {
+    display: block;
+    position: absolute;
+    right: 7vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+#biography-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#biography-description>.role {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #636363;
+}
+
+#biography-description>.role li {
+    list-style-type: none;
+}
+
+#biography-description>.role li:not(:last-child):after {
+    content: " /";
+}
+
+#biography-description blockquote {
+    display: block;
+    font-family: 'Butler', sans-serif;
+    font-weight: 200;
+    font-size: 2.65rem;
+}
+
+#biography-description blockquote::before {
+    content: "\201c";
+}
+
+#biography-description blockquote::after {
+    content: "\201d";
+}
+
+#biography-description .dash,
+#biography-description h3>br {
+    display: none;
+}
+
+#biography-description h3 {
+    order: 1;
+    margin-bottom: -0.15em;
+    z-index: 1;
+    font-family: 'Butler', sans-serif;
+    font-weight: 300;
+    font-size: 6.5rem;
+    line-height: 1em;
+}
+
+#biography-description h3::before {
+    content: "- ";
+}
+
+#biography-img {
+    order: 1;
+    max-height: 40vh;
+}
+
+#biography-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 /*}*/
 
-/*landscape phones*/
+/*landscape phones: from 576px to 767px*/
 @media screen and (min-width: 576px) {
+    :root {
+        font-size: 14px;
+    }
+
+    /*page 1*/
     #main {
         text-align: center;
         line-height: 100vh;
     }
-    
+
     #main-img {
         position: absolute;
         margin: 0;
@@ -96,26 +199,104 @@ h2 {
         width: auto;
         min-width: 70%;
     }
-    
+
     #main-title {
         display: inline-block;
         position: relative;
         vertical-align: middle;
         width: unset;
         min-height: unset;
+        font-size: 4.5rem;
         padding: 1em 0.5em 0.9em;
     }
-    
+
     #main-title h1 {
         line-height: 1em;
     }
-    
+
     #main-title h2 {
         position: absolute;
         left: 0;
         right: 0;
         margin: 0;
         margin-top: 2em;
+    }
+
+    /*page 2*/
+    #biography {
+        display: block;
+        padding-top: unset;
+        padding-left: 8.5vw;
+        padding-right: 8.5vw;
+    }
+
+    #biography h2 {
+        bottom: 4rem;
+        right: 0;
+        width: 8.5vw;
+        text-align: center;
+        transform: rotate(270deg);
+    }
+
+    #biography>div {
+        width: 50%;
+        float: left;
+    }
+
+    #biography-img {
+        height: calc(100% - 1rem);
+        max-height: 100vh;
+    }
+
+    #biography-description {
+        display: block;
+        padding-left: 8.5vw;
+    }
+
+    #biography-description>h3 {
+        margin-top: 10vh;
+        margin-bottom: 0.5em;
+        font-size: 3rem;
+    }
+
+    #biography-description h3::before {
+        content: "";
+    }
+
+    #biography-description .dash,
+    #biography-description h3>br {
+        display: unset;
+    }
+
+#biography-description>.role li {
+    display: inline;
+    list-style-type: none;
+}
+    #biography-description>.role {
+        font-size: 1rem;
+    }
+
+    #biography-description>.role li {
+        display: inline;
+    }
+
+    #biography-description>span.dash {
+        display: block;
+        margin-top: 0.25rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    #biography-description blockquote {
+        font-size: 1.5rem;
+    }
+
+    #biography::after {
+        content: "";
+        display: block;
+        clear: both;
     }
 }
 
@@ -139,142 +320,7 @@ h2 {
         font-size: 16px;
     }
 }
-
-/*page 1*/
-/*#main {
-    text-align: center;
-    position: relative;
-    line-height: 100vh;
 }
-
-#main-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    max-height: 75%;
-    width: 100%;
-    max-width: 70%;
-}
-
-#main-title {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    z-index: 1;
-    background: #FFFFFF;
-    text-align: center;
-    font-size: 5.5rem;
-    padding: 1.5em 0.5em 1.4em;
-}
-
-#main-title h1 {
-    margin: 0;
-    font-family: 'Butler', serif;
-    font-weight: 300;
-    font-size: 1em;
-    line-height: 1em;
-}
-
-#main-title h2 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0;
-    margin-top: 2em;
-    line-height: 1em;
-}
-
-/*page 2*/
-#biography {
-    padding-left: 8.5vw;
-    padding-right: 8.5vw;
-    position: relative;
-}
-
-#biography h2 {
-    display: block;
-    position: absolute;
-    bottom: 4rem;
-    right: 0;
-    width: 8.5vw;
-    text-align: center;
-    transform: rotate(270deg);
-}
-
-#biography>div {
-    width: 50%;
-    float: left;
-}
-
-#biography-img {
-    overflow: hidden;
-    height: calc(100vh - 4rem);
-}
-
-#biography-img>img {
-    display: block;
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 120%;
-    max-height: 150%;
-}
-
-#biography-description {
-    padding-left: 8.5vw;
-}
-
-#biography-description>h3 {
-    margin-top: 20vh;
-    margin-bottom: 0.75em;
-    font-family: 'Butler', serif;
-    font-weight: 300;
-    font-size: 5.5rem;
-}
-
-#biography-description>p,
-#biography-description>.role li {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 1.125rem;
-    color: #636363;
-}
-
-#biography-description>.role li {
-    display: inline;
-    list-style-type: none;
-}
-
-#biography-description>.role li:not(:last-child):after {
-    content: " /";
-}
-
-#biography-description blockquote {
-    font-family: 'Butler', serif;
-    display: block;
-    font-weight: 200;
-    font-size: 2rem;
-}
-
-#biography-description blockquote::before {
-    content: "\201c";
-}
-
-#biography-description blockquote::after {
-    content: "\201d";
-}
-
-#biography-description>span.dash {
-    display: block;
-    margin-top: 1.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 4rem;
-}
-
 #biography::after {
     content: "";
     display: block;
