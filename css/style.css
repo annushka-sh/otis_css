@@ -13,11 +13,14 @@
     margin-inline-end: 0px;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background: #fff;
     color: #000;
-    overflow-x: hidden;
 }
 
 /* min-height = 360px = 30*12 */
@@ -151,7 +154,7 @@ h2 {
     z-index: 1;
     font-family: 'Butler', sans-serif;
     font-weight: 300;
-    font-size: 6.5rem;
+    font-size: 5rem;
     line-height: 1em;
 }
 
@@ -236,6 +239,161 @@ h2 {
 #designers .designer-description>p {
     font-weight: 400;
 }
+
+/*page 4*/
+#testimonials {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 12vh;
+}
+
+#testimonials h2 {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+#testimonial-left {
+    order: 1;
+    width: 100%;
+}
+
+#testimonial-left ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-inline-start: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+}
+
+#testimonial-left ul li {
+    order: 2;
+    width: 50%;
+    padding-top: 3.5rem;
+    list-style-type: none;
+}
+
+#testimonial-left ul li:last-child {
+    order: 1;
+}
+
+#testimonial-left ul li h4 {
+    font-weight: 700;
+}
+
+#testimonial-left ul li a {
+    font-weight: 400;
+    text-decoration: none;
+    color: #000;
+}
+
+#testimonial-left #testimonial-container-img img {
+    display: none;
+}
+
+#testimonial-right {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+}
+
+#testimonial-right blockquote {
+    display: inline-block;
+    min-height: 40%;
+    width: 100%;
+    position: absolute;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    font-family: 'Butler', sans-serif;
+    font-size: 2.67rem;
+    font-weight: 200;
+}
+
+#testimonial-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*page 5*/
+#strong-points {
+    position: relative;
+}
+
+#strong-points h2 {
+    position: absolute;
+    top: 10vh;
+    right: 1em;
+}
+
+#strong-points .container {
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    padding-top: 25vh;
+    padding-bottom: 15vh;
+}
+
+#strong-points .carousel {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    white-space: nowrap;
+}
+
+#strong-points .carousel>div {
+    display: inline-block;
+    width: 50vw;
+    height: 100%;
+    vertical-align: text-top;
+}
+
+#strong-points .carousel>div:not(:last-child):not(.list) {
+    display: none;
+}
+
+#strong-points .carousel>div.list {
+    position: relative;
+    width: calc(100vw * 2 / 3);
+    padding: 1rem 4rem;
+    font-family: 'Butler', sans-serif;
+    font-weight: 300;
+}
+
+#strong-points .carousel>div.list h3 {
+    position: absolute;
+    top: -1.5em;
+    left: 0.5em;
+    font-size: 5.75rem;
+}
+
+#strong-points .carousel>div.list ul {
+    padding-inline-start: 0px;
+    font-size: 2.125rem;
+    line-height: normal;
+}
+
+#strong-points .carousel>div.list ul li {
+    list-style-type: none;
+}
+
+#strong-points .carousel>div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#strong-points .carousel:after {
+    clear: both;
+}
+
 
 /*}*/
 
@@ -366,6 +524,58 @@ h2 {
         width: 200%;
         transform: translateX(-65vw);
     }
+
+    /*page 4*/
+    #testimonials {
+        padding-top: 18vh;
+    }
+
+    #testimonial-left ul {
+        font-size: 1rem;
+    }
+
+    #testimonial-left ul li {
+        padding-top: 2.25rem;
+        width: auto;
+    }
+
+    #testimonial-right {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #testimonial-right blockquote {
+        width: 50%;
+        position: unset;
+        font-size: 2.25rem;
+    }
+
+    #testimonial-right img {
+        width: 50%;
+    }
+
+    /*page 5*/
+    #strong-points h2 {
+        top: 8vh;
+    }
+
+    #strong-points .container {
+        height: 75vh;
+        padding-top: 20vh;
+    }
+
+    #strong-points .carousel>div.list {
+        width: 50%;
+    }
+
+    #strong-points .carousel>div.list ul {
+        font-size: 1.5rem;
+    }
+
+    #strong-points .carousel>div.list h3 {
+        top: -1.25em;
+        font-size: 3.5rem;
+    }
 }
 
 /*tablets: from 768px to 991px*/
@@ -398,10 +608,47 @@ h2 {
         transform: rotate(180deg);
         writing-mode: vertical-rl;
     }
+
+    /*page 4*/
+    #testimonials {
+        padding-top: 15vh;
+    }
+
+    #testimonial-left ul li {
+        padding-top: 2rem;
+    }
+
+    #testimonial-right blockquote {
+        font-size: 2.5rem;
+    }
+
+    /*page 5*/
+    #strong-points .carousel {
+        left: -15%;
+    }
+
+    #strong-points .container {
+        height: 70vh;
+    }
+
+    #strong-points .carousel>div:not(:last-child):not(.list):nth-child(2) {
+        display: inline-block;
+    }
+
+    #strong-points .carousel>div,
+    #strong-points .carousel>div.list {
+        width: 40vw;
+    }
+
+    #strong-points .carousel>div.list.selected {
+        margin: 0 2rem;
+    }
 }
 
 /*desktops: from 992px to 1199px*/
 @media screen and (min-width: 992px) {
+
+    /*page 2*/
     #biography-img {
         height: calc(100% - 3rem);
     }
@@ -417,6 +664,118 @@ h2 {
 
     #biography-description blockquote {
         font-size: 1.75rem;
+    }
+
+    /*page 4*/
+    #testimonials {
+        width: 100%;
+        padding-top: 12vh;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #testimonials h2 {
+        top: -2.5rem;
+        right: 0;
+    }
+
+    #testimonial-left,
+    #testimonial-right {
+        flex: 1;
+        min-width: 50%;
+    }
+
+    #testimonial-left {
+        order: unset;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #testimonial-left ul {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+        height: 100%;
+        padding-right: 1.25rem;
+    }
+
+    #testimonial-left ul li {
+        width: unset;
+        padding-top: unset;
+        order: unset;
+    }
+
+    #testimonial-left ul li:last-child {
+        order: unset;
+    }
+
+    #testimonial-left #testimonial-container-img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    #testimonial-left #testimonial-container-img img {
+        display: unset;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    #testimonial-right {
+        display: block;
+        height: 100%;
+        padding-left: 12vw;
+        padding-right: 12vw;
+    }
+
+    #testimonial-right blockquote {
+        position: absolute;
+        width: calc(100% - 2 * 12vw);
+        padding: 0;
+        font-size: 2rem;
+    }
+
+    #testimonial-right img {
+        width: 100%;
+        height: 90%;
+    }
+
+    /*page 5*/
+    #strong-points .carousel {
+        left: -15%;
+    }
+
+    #strong-points h2 {
+        top: calc(25vh - 5.25rem);
+        left: 33vw;
+    }
+
+    #strong-points .container {
+        height: 65vh;
+    }
+
+    #strong-points .carousel>div:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    #strong-points .carousel>div:not(:last-child):not(.list):nth-child(1) {
+        display: inline-block;
+    }
+
+    #strong-points .carousel>div,
+    #strong-points .carousel>div.list {
+        width: 30vw;
+    }
+
+    #strong-points .carousel>div.list h3 {
+        font-size: 4rem;
+    }
+
+    #strong-points .carousel>div.list.selected {
+        margin: 0 4.5rem;
     }
 }
 
@@ -456,252 +815,60 @@ h2 {
         transform: rotate(180deg);
         writing-mode: vertical-rl;
     }
-}
-}
-#biography::after {
-    content: "";
-    display: block;
-    clear: both;
-}
 
-/*page 3*/
-#designers {
-    clear: left;
-    display: grid;
-    grid-template-columns: 2fr [pic1] 7em 1fr [pic2] 1em 1fr [pic3] 4.5em;
-    grid-template-rows: 10vh [row1] 50vh [main-row] 6em [text-row];
-    grid-template-areas:
-        "designer1-img . designer-title . . ."
-        "designer1-img . designer2-img . designer3-img ."
-        "designer1 . designer2 . designer3 .";
-    padding-top: 12vh;
+    /*page 4*/
+    #testimonial-left ul li {
+        transform: rotate(270deg) translate(0, 100%);
+    }
+
+    #testimonial-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #testimonial-right blockquote {
+        position: unset;
+        width: 100%;
+        min-height: 35%;
+    }
+
+    #testimonial-right img {
+        height: 50%;
+    }
+
+    /*page 5*/
+    #strong-points h2 {
+        top: calc(30vh - 5.25rem);
+        transform: rotate(270deg);
+        transform-origin: left bottom;
+    }
+
+    #strong-points .container {
+        height: 60vh;
+        padding-top: 25vh;
+    }
+
+    #strong-points .carousel>div,
+    #strong-points .carousel>div.list {
+        width: 25vw;
+    }
+
+    #strong-points .carousel>div.list.selected {
+        margin: 0 9rem;
+    }
+
+    #strong-points .carousel>div:not(:last-child) {
+        margin-right: 1.5rem;
+    }
+
+    #strong-points .carousel>div.list h3 {
+        font-size: 5.75rem;
+    }
+
+    #strong-points .carousel>div.list ul {
+        font-size: 2.125rem;
+    }
 }
-
-#designers .title {
-    display: inline;
-    grid-area: designer-title;
-    justify-self: end;
-    align-self: start;
-    transform: rotate(180deg);
-    margin-block-start: 0;
-    margin-block-end: 0;
-    writing-mode: vertical-rl;
-}
-
-#designer1-img {
-    grid-area: designer1-img;
-}
-
-#designer2-img {
-    grid-area: designer2-img;
-}
-
-#designer3-img {
-    grid-area: designer3-img;
-}
-
-#designer1 {
-    grid-area: designer1;
-    justify-self: center;
-}
-
-#designer2 {
-    grid-area: designer2;
-}
-
-#designer3 {
-    grid-area: designer3;
-}
-
-#designers img.designer-img {
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-#designers .designer-description {
-    font-family: 'Roboto', sans-serif;
-}
-
-#designers .designer-description>h3 {
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-#designers .designer-description>p {
-    font-weight: 400;
-}
-
-#designers .designer-description>p .bold {
-    font-weight: bold;
-}
-
-
-/*page 4*/
-#testimonials {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-#testimonials h2 {
-    position: absolute;
-    line-height: 1em;
-    top: -4rem;
-}
-
-#testimonial-left,
-#testimonial-right {
-    flex: 1;
-    min-width: 50%;
-}
-
-#testimonial-left {
-    padding-top: 15vh;
-    display: flex;
-    flex-direction: row;
-}
-
-#testimonial-left ul {
-    display: flex;
-    flex-direction: column;
-    padding-inline-start: 0px;
-    align-items: stretch;
-    justify-content: space-around;
-    height: 85vh;
-}
-
-#testimonial-left ul li {
-    display: inline-block;
-    list-style-type: none;
-    transform: rotate(270deg) translate(0, 100%);
-}
-
-#testimonial-left ul li h4 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-#testimonial-left ul li a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    text-decoration: none;
-    color: #000;
-}
-
-#testimonial-left #testimonial-container-img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-#testimonial-left #testimonial-container-img img {
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-#testimonial-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 15vh 17.5%;
-}
-
-#testimonial-right blockquote {
-    flex: 1;
-    font-family: 'Butler', serif;
-    font-size: 2rem;
-    font-weight: 200;
-    text-align: center;
-}
-
-#testimonial-right img {
-    flex: 1;
-    max-width: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-/*page 5*/
-#strong-points {
-    display: table;
-    position: relative;
-    font-family: 'Butler', serif;
-    font-weight: 300;
-    font-size: 5.75rem;
-}
-
-#strong-points h2 {
-    position: absolute;
-    top: 20%;
-    left: 33%;
-    transform: rotate(270deg);
-    transform-origin: left bottom;
-}
-
-#strong-points .container {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-#strong-points .carousel {
-    width: auto;
-    height: 71.5%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-}
-
-#strong-points .carousel>div {
-    display: inline-block;
-    width: 24%;
-    height: 100%;
-    vertical-align: bottom;
-}
-
-#strong-points .carousel>div:not(:last-child) {
-    margin-right: 0.15em;
-}
-
-#strong-points .carousel>div.strong-point-image {
-    height: calc(100% - 1.5em);
-}
-
-#strong-points .carousel>div.strong-point-list {
-    height: 100%;
-    margin: 0 1.7em;
-}
-
-#strong-points .carousel>div.strong-point-list h3 {
-    font-weight: 300;
-    font-size: 1em;
-}
-
-#strong-points .carousel>div.strong-point-list ul {
-    position: relative;
-    top: 100%;
-    /*top + h3.height + padding-top*/
-    transform: translateY(-100%) translateY(-2.75em);
-    padding: 0.75em 1em;
-    font-size: 2.125rem;
-}
-
-#strong-points .carousel>div.strong-point-list ul li {
-    list-style-type: none;
-    line-height: normal;
-}
-
-#strong-points .carousel>div>img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
 }
