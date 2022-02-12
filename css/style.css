@@ -1,7 +1,4 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     margin-block-start: 0em;
     margin-block-end: 0em;
     margin-inline-start: 0px;
@@ -38,7 +35,17 @@ img {
     object-position: center;
 }
 
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+}
 
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
 /*mobile devices: from 1 to 575px*/
 @media screen and (min-width: 1px) {
