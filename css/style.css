@@ -38,11 +38,7 @@ img {
     object-position: center;
 }
 
-h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 1.125rem;
-}
+
 
 /*mobile devices: from 1 to 575px*/
 @media screen and (min-width: 1px) {
