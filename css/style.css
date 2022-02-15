@@ -23,6 +23,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
     /*(For Chrome and Safari)*/
     -webkit-font-smoothing: antialiased;
+    background: #FFFFFF;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 /* min-height = 360px = 30*12 */
@@ -30,6 +36,14 @@ section {
     height: 100vh;
     min-height: 30rem;
     border: red 1px solid;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 h2 {
@@ -124,7 +138,28 @@ main {
 #biography h2 {
     display: block;
     position: absolute;
-    right: 7vw;
+    bottom: 4rem;
+    right: 0;
+    width: 8.5vw;
+    text-align: center;
+    transform: rotate(270deg);
+}
+
+#biography>div {
+    width: 50%;
+    float: left;
+}
+
+#biography-img {
+    overflow: hidden;
+    height: calc(100vh - 4rem);
+}
+
+#biography-img>img {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 120%;
+    max-height: 150%;
 }
 
 #biography-description {
@@ -199,14 +234,7 @@ main {
 
 /*page 3*/
 #designers {
-    display: grid;
     position: relative;
-    grid-template-columns: 2fr [pic1] 7em 1fr [pic2] 1em 1fr [pic3] 4.5em;
-    grid-template-rows: 10vh [row1] 50vh [main-row] 6em [text-row];
-    grid-template-areas:
-        "designer1-img . designer-title . . ."
-        "designer1-img . designer2-img . designer3-img ."
-        "designer1 . designer2 . designer3 .";
     padding-top: 12vh;
     width: 250%;
     transform: translateX(-120vw);
@@ -214,47 +242,81 @@ main {
 }
 
 #designers h2 {
-    display: inline;
-    grid-area: designer-title;
-    justify-self: end;
-    align-self: start;
-    transform: translateX(100%);
+    position: absolute;
+    left: calc((100% - 3.5rem)*0.75 - 0.5rem);
+    top: calc(22vh - 1.2em);
+    transform: rotate(270deg);
+    transform-origin: bottom left;
+    line-height: 1em;
+    background: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: grayscale(1) contrast(5) drop-shadow(0.1em 0.1em white);
 }
 
-#designer1-img {
-    grid-area: designer1-img;
+#designers #designers-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    column-gap: 1rem;
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "designer1 designer2 designer3";
+    align-items: end;
+    padding-right: 3.5rem;
 }
 
-#designer2-img {
-    grid-area: designer2-img;
+#designers article {
+    display: inline-block;
+    width: calc(25% - 1rem);
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    flex-basis: 25%;
+    flex-grow: 1;
 }
 
-#designer3-img {
-    grid-area: designer3-img;
+#designers article:not(:last-child) {
+    margin-right: 1rem;
 }
 
-#designer1 {
+#designers article#designer1 {
+    width: 50%;
+    padding-right: 6.75rem;
+    flex-basis: 50%;
+    flex-grow: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     grid-area: designer1;
-    justify-self: center;
 }
 
-#designer2 {
+#designers article#designer2 {
     grid-area: designer2;
 }
 
-#designer3 {
+#designers article#designer3 {
     grid-area: designer3;
 }
 
 #designers img.designer-img {
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    object-position: center;
+    max-height: 50vh;
+    padding-bottom: 1.2em;
+}
+
+#designers img.designer-img#designer1-img {
+    max-height: 60vh;
+}
+
+#designers .designer-description#designer1-desc {
+    width: 50%;
+    margin: 0 auto;
 }
 
 #designers .designer-description>h3 {
+    font-size: 1em;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -263,45 +325,75 @@ main {
     font-weight: 400;
 }
 
+#designers .designer-description>p .bold {
+    font-weight: 700;
+}
+
+@supports(display: flex) {
+    #designers article,
+    #designers article#designer1 {
+        width: auto;
+    }
+
+    #designers article:not(:last-child) {
+        margin-right: 0;
+    }
+
+    #designers .designer-description#designer1-desc {
+        width: auto;
+        margin: 0;
+    }
+}
+
 /*page 4*/
 #testimonials {
     position: relative;
     display: flex;
-    flex-direction: column;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 12vh;
+    flex-direction: row;
 }
 
 #testimonials h2 {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    line-height: 1em;
+    top: -4rem;
+}
+
+#testimonials>div {
+    width: 50%;
+    float: left;
+    flex-grow: 1;
+    flex-basis: 50%;
 }
 
 #testimonial-left {
-    order: 1;
-    width: 100%;
+    padding-top: 15vh;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#testimonial-left>* {
+    display: inline-block;
+    vertical-align: top;
 }
 
 #testimonial-left ul {
+    height: 100%;
+    max-width: 20%;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
     padding-inline-start: 0px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.25rem;
 }
 
 #testimonial-left ul li {
-    order: 2;
-    width: 50%;
-    padding-top: 3.5rem;
+    display: block;
+    height: 33%;
     list-style-type: none;
-}
-
-#testimonial-left ul li:last-child {
-    order: 1;
+    transform: rotate(270deg) translate(0, 60%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
 }
 
 #testimonial-left ul li h4 {
@@ -314,34 +406,51 @@ main {
     color: #000;
 }
 
-#testimonial-left #testimonial-container-img img {
-    display: none;
+#testimonial-left #testimonial-container-img {
+    position: relative;
+    height: 100%;
+    width: 80%;
 }
 
 #testimonial-right {
-    position: relative;
-    width: 100%;
-    height: 65vh;
+    padding: 13vh 17.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 #testimonial-right blockquote {
-    display: inline-block;
-    min-height: 40%;
-    width: 100%;
-    position: absolute;
-    padding: 1rem;
-    text-align: center;
-    background-color: #fff;
-    font-family: 'Butler', serif;
-    font-size: 2.67rem;
+    font-family: 'Butler', sans-serif;
+    font-size: 2rem;
     font-weight: 200;
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 50%;
 }
 
 #testimonial-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    max-width: 100%;
+    flex-grow: 1;
+    flex-basis: 50%;
+}
+
+#testimonials::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@supports(display: flex) {
+    #testimonials>div ,
+    #testimonial-left ul li {
+        height: auto;
+    }
+
+    #testimonial-left ul li {
+        transform: rotate(270deg);
+        transform-origin: 70% 0;
+    }
 }
 
 /*page 5*/
@@ -396,522 +505,17 @@ main {
     font-size: 5.75rem;
 }
 
-#strong-points .carousel>div.list ul {
-    padding-inline-start: 0px;
-    font-size: 2.125rem;
-    line-height: normal;
+#strong-points .carousel>div.strong-point-list ul {
+    position: relative;
+    top: 100%;
+    /*top + h3.height + padding-top*/
+    transform: translateY(-100%) translateY(-2.75em);
+    padding: 0.75em 1em;
+    font-size: 1.8rem;
 }
 
 #strong-points .carousel>div.list ul li {
     list-style-type: none;
-}
-
-#strong-points .carousel>div>img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-#strong-points .carousel:after {
-    clear: both;
-}
-
-
-/*}*/
-
-/*landscape phones: from 576px to 767px*/
-@media screen and (min-width: 576px) {
-    :root {
-        font-size: 14px;
-    }
-
-    /*page 1*/
-    #main {
-        text-align: center;
-        line-height: 100vh;
-    }
-
-    #main-img {
-        position: absolute;
-        margin: 0;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 75%;
-        width: auto;
-        min-width: 70%;
-    }
-
-    #main-title {
-        display: inline-block;
-        position: relative;
-        vertical-align: middle;
-        width: unset;
-        min-height: unset;
-        font-size: 4.5rem;
-        padding: 1em 0.5em 0.9em;
-    }
-
-    #main-title h1 {
-        line-height: 1em;
-    }
-
-    #main-title h2 {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0;
-        margin-top: 2em;
-    }
-
-    /*page 2*/
-    #biography {
-        display: block;
-        padding-top: unset;
-        padding-left: 8.5vw;
-        padding-right: 8.5vw;
-    }
-
-    #biography h2 {
-        bottom: 4rem;
-        right: 0;
-        width: 8.5vw;
-        text-align: center;
-        transform: rotate(270deg);
-    }
-
-    #biography>div {
-        width: 50%;
-        float: left;
-    }
-
-    #biography-img {
-        height: calc(100% - 1rem);
-        max-height: 100vh;
-    }
-
-    #biography-description {
-        display: block;
-        padding-left: 8.5vw;
-    }
-
-    #biography-description>h3 {
-        margin-top: 10vh;
-        margin-bottom: 0.5em;
-        font-size: 3rem;
-    }
-
-    #biography-description h3::before {
-        content: "";
-    }
-
-    #biography-description .dash,
-    #biography-description h3>br {
-        display: unset;
-    }
-
-#biography-description>.role li {
-    display: inline;
-    list-style-type: none;
-}
-    #biography-description>.role {
-        font-size: 1rem;
-    }
-
-    #biography-description>.role li {
-        display: inline;
-    }
-
-    #biography-description>span.dash {
-        display: block;
-        margin-top: 0.25rem;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        font-size: 1rem;
-        line-height: 2rem;
-    }
-
-    #biography-description blockquote {
-        font-size: 1.5rem;
-    }
-
-    #biography::after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-
-    /*page 3*/
-    #designers {
-        width: 200%;
-        transform: translateX(-65vw);
-    }
-
-    /*page 4*/
-    #testimonials {
-        padding-top: 18vh;
-    }
-
-    #testimonial-left ul {
-        font-size: 1rem;
-    }
-
-    #testimonial-left ul li {
-        padding-top: 2.25rem;
-        width: auto;
-    }
-
-    #testimonial-right {
-        display: flex;
-        flex-direction: row;
-    }
-
-    #testimonial-right blockquote {
-        width: 50%;
-        position: unset;
-        font-size: 2.25rem;
-    }
-
-    #testimonial-right img {
-        width: 50%;
-    }
-
-    /*page 5*/
-    #strong-points h2 {
-        top: 8vh;
-    }
-
-    #strong-points .container {
-        height: 75vh;
-        padding-top: 20vh;
-    }
-
-    #strong-points .carousel>div.list {
-        width: 50%;
-    }
-
-    #strong-points .carousel>div.list ul {
-        font-size: 1.5rem;
-    }
-
-    #strong-points .carousel>div.list h3 {
-        top: -1.25em;
-        font-size: 3.5rem;
-    }
-}
-
-/*tablets: from 768px to 991px*/
-@media screen and (min-width: 768px) {
-    :root {
-        font-size: 16px;
-    }
-
-    /*page 2*/
-    #biography-img {
-        height: calc(100% - 2rem);
-    }
-
-    #biography-description>h3 {
-        font-size: 3.5rem;
-    }
-
-    #biography-description>span.dash {
-        margin-top: 1rem;
-    }
-
-    /*page 3*/
-    #designers {
-        padding-top: 12vh;
-        width: 150%;
-        transform: translateX(-20vw);
-    }
-
-    #designers h2 {
-        transform: rotate(180deg);
-        writing-mode: vertical-rl;
-    }
-
-    /*page 4*/
-    #testimonials {
-        padding-top: 15vh;
-    }
-
-    #testimonial-left ul li {
-        padding-top: 2rem;
-    }
-
-    #testimonial-right blockquote {
-        font-size: 2.5rem;
-    }
-
-    /*page 5*/
-    #strong-points .carousel {
-        left: -15%;
-    }
-
-    #strong-points .container {
-        height: 70vh;
-    }
-
-    #strong-points .carousel>div:not(:last-child):not(.list):nth-child(2) {
-        display: inline-block;
-    }
-
-    #strong-points .carousel>div,
-    #strong-points .carousel>div.list {
-        width: 40vw;
-    }
-
-    #strong-points .carousel>div.list.selected {
-        margin: 0 2rem;
-    }
-}
-
-/*desktops: from 992px to 1199px*/
-@media screen and (min-width: 992px) {
-
-    /*page 2*/
-    #biography-img {
-        height: calc(100% - 3rem);
-    }
-
-    #biography-description>h3 {
-        font-size: 4.5rem;
-    }
-
-    #biography-description>span.dash {
-        line-height: 3rem;
-        font-size: 1.5rem;
-    }
-
-    #biography-description blockquote {
-        font-size: 1.75rem;
-    }
-
-    /*page 4*/
-    #testimonials {
-        width: 100%;
-        padding-top: 12vh;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    #testimonials h2 {
-        top: -2.5rem;
-        right: 0;
-    }
-
-    #testimonial-left,
-    #testimonial-right {
-        flex: 1;
-        min-width: 50%;
-    }
-
-    #testimonial-left {
-        order: unset;
-        display: flex;
-        flex-direction: row;
-    }
-
-    #testimonial-left ul {
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: stretch;
-        height: 100%;
-        padding-right: 1.25rem;
-    }
-
-    #testimonial-left ul li {
-        width: unset;
-        padding-top: unset;
-        order: unset;
-    }
-
-    #testimonial-left ul li:last-child {
-        order: unset;
-    }
-
-    #testimonial-left #testimonial-container-img {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    #testimonial-left #testimonial-container-img img {
-        display: unset;
-        width: 100%;
-        height: 100%;
-        max-height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    #testimonial-right {
-        display: block;
-        height: 100%;
-        padding-left: 12vw;
-        padding-right: 12vw;
-    }
-
-    #testimonial-right blockquote {
-        position: absolute;
-        width: calc(100% - 2 * 12vw);
-        padding: 0;
-        font-size: 2rem;
-    }
-
-    #testimonial-right img {
-        width: 100%;
-        height: 90%;
-    }
-
-    /*page 5*/
-    #strong-points .carousel {
-        left: -15%;
-    }
-
-    #strong-points h2 {
-        top: calc(25vh - 5.25rem);
-        left: 33vw;
-    }
-
-    #strong-points .container {
-        height: 65vh;
-    }
-
-    #strong-points .carousel>div:not(:last-child) {
-        margin-right: 1rem;
-    }
-
-    #strong-points .carousel>div:not(:last-child):not(.list):nth-child(1) {
-        display: inline-block;
-    }
-
-    #strong-points .carousel>div,
-    #strong-points .carousel>div.list {
-        width: 30vw;
-    }
-
-    #strong-points .carousel>div.list h3 {
-        font-size: 4rem;
-    }
-
-    #strong-points .carousel>div.list.selected {
-        margin: 0 4.5rem;
-    }
-}
-
-/*large desktops*/
-@media screen and (min-width: 1200px) {
-    main {
-        height: 100vh;
-    }
-    header {
-        /*for most browser*/
-        position: fixed;
-        /* Safari */
-        position: -webkit-sticky;
-        /* Firefox */
-        position: sticky;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 3rem;
-        z-index: 2;
-        background-color: #fff;
-        text-align: center;
-        line-height: 3rem;
-    }
-
-    #biography-img {
-        height: calc(100% - 4rem);
-    }
-
-    #biography-description>h3 {
-        margin-top: 20vh;
-        margin-bottom: 0.75em;
-        font-size: 5.5rem;
-    }
-
-    #biography-description>.role {
-        font-size: 1.125rem;
-    }
-
-    #biography-description>span.dash {
-        margin-top: 1.5rem;
-        font-size: 2rem;
-        line-height: 4rem;
-    }
-
-    #biography-description blockquote {
-        font-size: 2rem;
-    }
-
-    /*page 3*/
-    #designers {
-        width: 100%;
-        transform: unset;
-    }
-
-    #designers h2 {
-        transform: rotate(180deg);
-        writing-mode: vertical-rl;
-    }
-
-    /*page 4*/
-    #testimonial-left ul li {
-        transform: rotate(270deg) translate(0, 100%);
-    }
-
-    #testimonial-right {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    #testimonial-right blockquote {
-        position: unset;
-        width: 100%;
-        min-height: 35%;
-    }
-
-    #testimonial-right img {
-        height: 50%;
-    }
-
-    /*page 5*/
-    #strong-points h2 {
-        top: calc(30vh - 5.25rem);
-        transform: rotate(270deg);
-        transform-origin: left bottom;
-    }
-
-    #strong-points .container {
-        height: 60vh;
-        padding-top: 25vh;
-    }
-
-    #strong-points .carousel>div,
-    #strong-points .carousel>div.list {
-        width: 25vw;
-    }
-
-    #strong-points .carousel>div.list.selected {
-        margin: 0 9rem;
-    }
-
-    #strong-points .carousel>div:not(:last-child) {
-        margin-right: 1.5rem;
-    }
-
-    #strong-points .carousel>div.list h3 {
-        font-size: 5.75rem;
-    }
-
-    #strong-points .carousel>div.list ul {
-        font-size: 2.125rem;
-    }
+    line-height: normal;
 }
 }
