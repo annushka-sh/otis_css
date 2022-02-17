@@ -33,6 +33,7 @@ main {
 
 /* min-height = 360px = 30*12 */
 section {
+    min-height: 700px;
     height: 100vh;
     min-height: 30rem;
     border: red 1px solid;
@@ -152,7 +153,7 @@ main {
 
 #biography-img {
     overflow: hidden;
-    height: calc(100vh - 4rem);
+    height: calc(100% - 4rem);
 }
 
 #biography-img>img {
@@ -162,11 +163,22 @@ main {
     max-height: 150%;
 }
 
-#biography-description {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+#biography-description-container {
+    display: table;
     height: 100%;
+}
+
+#biography-description {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 8.5vw;
+}
+
+#biography-description>h3 {
+    margin-bottom: 0.75em;
+    font-family: 'Butler', serif;
+    font-weight: 300;
+    font-size: 5.5rem;
 }
 
 #biography-description>.role {
@@ -235,16 +247,12 @@ main {
 /*page 3*/
 #designers {
     position: relative;
-    padding-top: 12vh;
-    width: 250%;
-    transform: translateX(-120vw);
-    align-items: center;
 }
 
 #designers h2 {
     position: absolute;
     left: calc((100% - 3.5rem)*0.75 - 0.5rem);
-    top: calc(22vh - 1.2em);
+    top: calc(25% - 1.2em);
     transform: rotate(270deg);
     transform-origin: bottom left;
     line-height: 1em;
@@ -255,27 +263,20 @@ main {
 }
 
 #designers #designers-container {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
-    column-gap: 1rem;
-    display: grid;
-    grid-template-columns: 2fr repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-        "designer1 designer2 designer3";
-    align-items: end;
+    position: absolute;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
     padding-right: 3.5rem;
 }
 
 #designers article {
     display: inline-block;
     width: calc(25% - 1rem);
-    height: auto;
+    height: 100%;
+    vertical-align: baseline;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    flex-basis: 25%;
-    flex-grow: 1;
 }
 
 #designers article:not(:last-child) {
@@ -285,29 +286,15 @@ main {
 #designers article#designer1 {
     width: 50%;
     padding-right: 6.75rem;
-    flex-basis: 50%;
-    flex-grow: 2;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    grid-area: designer1;
-}
-
-#designers article#designer2 {
-    grid-area: designer2;
-}
-
-#designers article#designer3 {
-    grid-area: designer3;
 }
 
 #designers img.designer-img {
-    max-height: 50vh;
+    height: 90%;
     padding-bottom: 1.2em;
 }
 
-#designers img.designer-img#designer1-img {
-    max-height: 60vh;
+#designers article:not(.selected) img.designer-img {
+    height: 75%;
 }
 
 #designers .designer-description#designer1-desc {
@@ -329,10 +316,27 @@ main {
     font-weight: 700;
 }
 
-@supports(display: flex) {
-    #designers article,
+/*@supports(display: flex) {
+    #designers #designers-container {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        column-gap: 1rem;
+    }
+
+    #designers article {
+        width: auto;
+        flex-basis: 25%;
+        flex-grow: 1;
+    }
+
     #designers article#designer1 {
         width: auto;
+        flex-basis: 50%;
+        flex-grow: 2;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
     }
 
     #designers article:not(:last-child) {
@@ -345,13 +349,30 @@ main {
     }
 }
 
-/*page 4*/
-#testimonials {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-}
+@supports(display: grid) {
+    #designers #designers-container {
+        display: grid;
+        grid-template-columns: 2fr repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "designer1 designer2 designer3";
+        align-items: end;
+    }
 
+    #designers article#designer1 {
+        grid-area: designer1;
+    }
+
+    #designers article#designer2 {
+        grid-area: designer2;
+    }
+    
+    #designers article#designer3 {
+        grid-area: designer3;
+    }
+}*/
+
+/*page 4*/
 #testimonials h2 {
     position: absolute;
     line-height: 1em;
@@ -361,15 +382,11 @@ main {
 #testimonials>div {
     width: 50%;
     float: left;
-    flex-grow: 1;
-    flex-basis: 50%;
 }
 
 #testimonial-left {
     padding-top: 15vh;
     height: 100%;
-    display: flex;
-    flex-direction: row;
 }
 
 #testimonial-left>* {
@@ -380,10 +397,6 @@ main {
 #testimonial-left ul {
     height: 100%;
     max-width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-around;
     padding-inline-start: 0px;
 }
 
@@ -414,10 +427,6 @@ main {
 
 #testimonial-right {
     padding: 13vh 17.5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 #testimonial-right blockquote {
@@ -425,14 +434,10 @@ main {
     font-size: 2rem;
     font-weight: 200;
     text-align: center;
-    flex-grow: 1;
-    flex-basis: 50%;
 }
 
 #testimonial-right img {
     max-width: 100%;
-    flex-grow: 1;
-    flex-basis: 50%;
 }
 
 #testimonials::after {
@@ -442,7 +447,30 @@ main {
 }
 
 @supports(display: flex) {
-    #testimonials>div ,
+    #testimonials {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #testimonials>div {
+        width: auto;
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+
+    #testimonial-left {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #testimonial-left ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-around;
+    }
+
+    #testimonials>div,
     #testimonial-left ul li {
         height: auto;
     }
@@ -450,6 +478,18 @@ main {
     #testimonial-left ul li {
         transform: rotate(270deg);
         transform-origin: 70% 0;
+    }
+
+    #testimonial-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    #testimonial-right>* {
+        flex-grow: 1;
+        flex-basis: 50%;
     }
 }
 
