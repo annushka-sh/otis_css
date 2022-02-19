@@ -319,7 +319,7 @@ main {
     #designers #designers-container {
         display: flex;
         flex-flow: row nowrap;
-        align-items: flex-end;
+        align-items: baseline;
         column-gap: 1rem;
         width: 100%;
     }
