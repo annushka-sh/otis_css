@@ -12,30 +12,32 @@
 </head>
 
 <body>
-    <header>Menu</header>
     <main>
         <section id="main">
-            <div id="main-title">
-                <h1>Atlas Studio</h1>
-                <h2>Modern Web Studio</h2>
+            <div class="main-background">
+                <div class="main-title">
+                    <h1>Atlas Studio</h1>
+                    <h2>Modern Web Studio</h2>
+                </div>
             </div>
-            <img id="main-img" src="image/main-1.5x.png" alt="Main">
         </section>
         <section id="biography">
             <h2>Biography</h2>
-            <div id="biography-img">
+            <div class="biography-img">
                 <img src="image/biography-1.5x.png" alt="Biography">
             </div>
-            <div id="biography-description-container">
-                <div id="biography-description">
-                    <h3>Katya<br />Mills</h3>
-                    <p>Art Director</p>
-                    <ul class="role">
-                        <li>Scenography</li>
-                        <li>Styling</li>
-                        <li>Creative Photography</li>
-                        <li>Design</li>
-                    </ul>
+            <div class="biography-description-container">
+                <div class="biography-description">
+                    <h3>Katya <br />Mills</h3>
+                    <div class="biography-description-role">
+                        <p>Art Director</p>
+                        <ul>
+                            <li>Scenography</li>
+                            <li>Styling</li>
+                            <li>Creative Photography</li>
+                            <li>Design</li>
+                        </ul>
+                    </div>
                     <span class="dash">-</span>
                     <blockquote>The more I deal with the work as something that is my own, as something that is
                         personal,
@@ -44,43 +46,47 @@
             </div>
         </section>
         <section id="designers">
-            <h2>Designers</h2><div id="designers-container">
-                <article id="designer1" class="selected">
-                    <img id="designer1-img" class="designer-img" src="image/designer_jess_wonder.png" alt="Jess Wonder">
-                    <div id="designer1-desc" class="designer-description">
-                        <h3>Jess Wonder</h3>
-                        <p>
-                            <span class="bold">From/</span> Be more flower
-                            <br />
-                            <span class="bold">Skills/</span> Design Strategy / Marketing
-                        </p>
-                    </div>
-                </article><article id="designer2">
-                    <img id="designer2-img" class="designer-img" src="image/designer_kameron_clein.png"
-                        alt="Kameron Clein">
-                    <div id="designer2-desc" class="designer-description">
-                        <h3>Kameron Clein</h3>
-                        <p>
-                            <span class="bold">From/</span> Be more flower
-                            <br />
-                            <span class="bold">Skills/</span> Design Strategy / Marketing
-                        </p>
-                    </div>
-                </article><article id="designer3">
-                    <img id="designer3-img" class="designer-img" src="image/designer_louisse_red.png" alt="LOUISSE RED">
-                    <div id="designer3-desc" class="designer-description">
-                        <h3>LOUISSE RED</h3>
-                        <p>
-                            <span class="bold">From/</span> Be more flower
-                            <br />
-                            <span class="bold">Skills/</span> Design Strategy / Marketing
-                        </p>
-                    </div>
-                </article>
+            <h2>Designers</h2>
+            <div class="designers-container">
+                <div class="designers-carousel">
+                    <article id="designer1" class="selected">
+                        <img id="designer1-img" class="designer-img" src="image/designer_jess_wonder.png" alt="Jess Wonder">
+                        <div id="designer1-desc" class="designer-description">
+                            <h3>Jess Wonder</h3>
+                            <p>
+                                <span class="bold">From/</span> Be more flower
+                                <br />
+                                <span class="bold">Skills/</span> Design Strategy / Marketing
+                            </p>
+                        </div>
+                    </article><article id="designer2">
+                        <img id="designer2-img" class="designer-img" src="image/designer_kameron_clein.png"
+                            alt="Kameron Clein">
+                        <div id="designer2-desc" class="designer-description">
+                            <h3>Kameron Clein</h3>
+                            <p>
+                                <span class="bold">From/</span> Be more flower
+                                <br />
+                                <span class="bold">Skills/</span> Design Strategy / Marketing
+                            </p>
+                        </div>
+                    </article><article id="designer3">
+                        <img id="designer3-img" class="designer-img" src="image/designer_louisse_red.png" alt="LOUISSE RED">
+                        <div id="designer3-desc" class="designer-description">
+                            <h3>LOUISSE RED</h3>
+                            <p>
+                                <span class="bold">From/</span> Be more flower
+                                <br />
+                                <span class="bold">Skills/</span> Design Strategy / Marketing
+                            </p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
         <section id="testimonials">
-            <div id="testimonial-left">
+            <h2>Testimonials</h2>
+            <div class="testimonial-website">
                 <ul>
                     <li>
                         <h4>Website</h4>
@@ -94,12 +100,10 @@
                         <h4>Creativity</h4>
                         <a href="www.whitepapers.com">www.whitepapers.com</a>
                     </li>
-                </ul><div id="testimonial-container-img">
-                    <h2>Testimonials</h2>
+                </ul><div class="testimonial-website-img">
                     <img src="image/keghan-crossland.png" alt="Creativity">
                 </div>
-            </div>
-            <div id="testimonial-right">
+            </div><div class="testimonial-quote">
                 <blockquote>I just really want to do good work and work with some great people, people who challange me.
                 </blockquote>
                 <img src="image/sinitta-leunen.png" alt="Img">
@@ -107,15 +111,15 @@
         </section>
         <section id="strong-points">
             <h2>Strong points</h2>
-            <div class="container">
+            <div class="strong-points-container">
                 <div class="carousel">
-                    <div class="strong-point-image">
+                    <div class="carousel-item">
                         <img src="image/dawid-liberadzki.png" alt="Img1">
                     </div>
-                    <div class="strong-point-image">
+                    <div class="carousel-item">
                         <img src="image/avery-klein.png" alt="Img2">
                     </div>
-                    <div class="strong-point-list">
+                    <div class="carousel-item list">
                         <h3>Strengths</h3>
                         <ul>
                             <li>Interiors</li>
@@ -132,7 +136,7 @@
                             <li>Creativity</li>
                         </ul>
                     </div>
-                    <div class="strong-point-image">
+                    <div class="carousel-item">
                         <img src="image/avery-klein.png" alt="Img3">
                     </div>
                 </div>
