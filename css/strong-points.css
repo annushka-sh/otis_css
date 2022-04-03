@@ -1,0 +1,278 @@
+/*mobile devices: from 1 to 575px*/
+@media screen and (min-width: 1px) {
+    #strong-points {
+        position: relative;
+        font-family: 'Butler', serif;
+        font-weight: 300;
+        font-size: 4.75rem;
+    }
+
+    #strong-points h2 {
+        position: absolute;
+        top: 17.5%;
+        right: 2rem;
+    }
+
+    #strong-points .strong-points-container {
+        position: absolute;
+        height: 70%;
+        width: 100%;
+        top: 90%;
+        transform: translateY(-90%);
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel {
+        height: 100%;
+        width: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item {
+        display: inline-block;
+        width: 50%;
+        height: 85%;
+        vertical-align: bottom;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item:not(:last-child) {
+        margin-right: 0.15em;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item.strong-points-carousel-item-list {
+        position: relative;
+        height: 100%;
+        width: auto;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item.strong-points-carousel-item-list h3 {
+        position: absolute;
+        font-weight: 300;
+        font-size: 1em;
+        line-height: 1em;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item.strong-points-carousel-item-list ul {
+        position: relative;
+        height: 85%;
+        top: 100%;
+        transform: translateY(-100%);
+        font-size: 1.75rem;
+        padding: 0.5em;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item.strong-points-carousel-item-list ul li {
+        list-style-type: none;
+        line-height: normal;
+    }
+
+    @supports(display: flex) {
+        #strong-points {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        #strong-points .strong-points-container {
+            position: unset;
+            transform: none;
+            flex-basis: 72%;
+            height: unset;
+            margin-bottom: 2rem;
+        }
+
+        #strong-points .strong-points-container .strong-points-carousel {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-end;
+            column-gap: 0.15em;
+            width: 100%;
+        }
+
+        #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item {
+            width: auto;
+            display: block;
+            flex: 0 0 50%;
+        }
+
+        #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item.strong-points-carousel-item-list {
+            flex-basis: auto;
+        }
+
+        #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item:not(:last-child) {
+            margin-right: 0;
+        }
+    }
+
+    @supports(display: grid) {
+        #strong-points .strong-points-container .strong-points-carousel {
+            display: grid;
+            grid-template-columns: repeat(2, 50%) auto 50%;
+            grid-template-rows: 100%;
+        }
+    }
+}
+
+/*landscape phones: from 576px to 767px*/
+@media screen and (min-width: 576px) {
+    #strong-points {
+        font-size: 4rem;
+    }
+
+    #strong-points h2 {
+        top: 1em;
+    }
+
+    #strong-points .strong-points-container {
+        height: 90%;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item {
+        width: 40%;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item.strong-points-carousel-item-list ul {
+        font-size: 1.2rem;
+    }
+
+    @supports(display: flex) {
+        #strong-points .strong-points-container {
+            margin-bottom: 0;
+        }
+
+        #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item {
+            width: auto;
+            display: block;
+            flex: 0 0 40%;
+        }
+
+        #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item.strong-points-carousel-item-list {
+            flex-basis: auto;
+        }
+    }
+
+    @supports(display: grid) {
+        #strong-points .strong-points-container .strong-points-carousel {
+            grid-template-columns: repeat(2, 40%) auto 40%;
+        }
+    }
+}
+
+/*tablets: from 768px to 991px*/
+@media screen and (min-width: 768px) {
+    #strong-points {
+        font-size: 4rem;
+    }
+
+    #strong-points h2 {
+        top: 7.5%;
+    }
+
+    #strong-points .strong-points-container {
+        height: 80%;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item {
+        width: 33%;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item.strong-points-carousel-item-list h3 {
+        position: relative;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item.strong-points-carousel-item-list ul {
+        font-size: 1.25rem;
+        top: unset;
+        transform: none;
+    }
+
+    @supports(display: flex) {
+        #strong-points .strong-points-container {
+            margin-bottom: 1rem;
+        }
+
+        #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item {
+            width: auto;
+            display: block;
+            flex: 0 0 33%;
+        }
+    }
+
+    @supports(display: grid) {
+        #strong-points .strong-points-container .strong-points-carousel {
+            grid-template-columns: repeat(2, 33%) auto 33%;
+        }
+    }
+}
+
+/*desktops: from 992px to 1199px*/
+@media screen and (min-width: 992px) {
+    #strong-points {
+        font-size: 4.8rem;
+    }
+
+    #strong-points h2 {
+        top: 20%;
+        left: 33%;
+        transform: rotate(270deg);
+        transform-origin: left bottom;
+    }
+
+    #strong-points .strong-points-container {
+        height: 75%;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item {
+        width: 25%;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item.strong-points-carousel-item-list {
+        margin: 0 0.75em;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item.strong-points-carousel-item-list ul {
+        font-size: 1.5rem;
+    }
+
+    @supports(display: flex) {
+        #strong-points .strong-points-container {
+            margin-bottom: 2rem;
+        }
+
+        #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item {
+            width: auto;
+            display: block;
+            flex: 0 0 25%;
+        }
+    }
+}
+
+/*large desktops*/
+@media screen and (min-width: 1200px) {
+    #strong-points {
+        font-size: 5.75rem;
+    }
+
+    #strong-points .strong-points-container {
+        height: 71.5%;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item {
+        width: 24%;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item.strong-points-carousel-item-list {
+        margin: 0 1.7em;
+    }
+
+    #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item.strong-points-carousel-item-list ul {
+        font-size: 1.6rem;
+    }
+
+    @supports(display: flex) {
+        #strong-points .strong-points-container .strong-points-carousel .strong-points-carousel-item {
+            width: auto;
+        }
+    }
+}
