@@ -1,0 +1,41 @@
+@media screen and (min-width: 1px) {
+    .promo {
+        text-align: center;
+    }
+
+    .promo .promo__background {
+        height: 100%;
+        background-color: #cccccc;
+        background-image: url("../image/main-1.5x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .promo .promo__box {
+        height: 40%;
+        background-color: #fff;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .promo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .promo .promo__background {
+        height: 70%;
+        width: 74%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .promo .promo__box {
+        height: min-content;
+    }
+}

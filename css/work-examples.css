@@ -1,0 +1,86 @@
+@media screen and (min-width: 1px) {
+    .work-examples .work-examples__image {
+        display: none;
+    }
+
+    @supports(display: flex) {
+        .work-examples {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .work-examples,
+    .work-examples>* {
+        transform: scaleY(-1);
+    }
+
+    .work-examples .work-examples__image {
+        height: 69%;
+        display: block;
+    }
+
+    @supports(display: flex) {
+
+        .work-examples,
+        .work-examples>* {
+            transform: none;
+        }
+
+        .work-examples .work-examples__list {
+            flex-basis: 20%;
+            flex-grow: 4;
+        }
+
+        .work-examples .work-examples__image {
+            height: 0;
+            flex-basis: 80%;
+            flex-grow: 1;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .work-examples,
+    .work-examples>* {
+        transform: none;
+    }
+
+    .work-examples>* {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .work-examples .work-examples__list {
+        max-width: 20%;
+    }
+
+    .work-examples .work-examples__image {
+        height: 100%;
+        width: 80%;
+    }
+
+    @supports(display: flex) {
+        .work-examples {
+            flex-direction: row;
+        }
+
+        .work-examples>* {
+            display: block;
+        }
+
+        .work-examples .work-examples__list {
+            flex-basis: 20%;
+            flex-grow: 1;
+        }
+
+        .work-examples .work-examples__image {
+            flex-basis: 80%;
+            flex-grow: 4;
+        }
+    }
+}

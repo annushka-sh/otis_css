@@ -13,14 +13,14 @@
 
 <body>
     <nav class="menu-mobile">
-        <ul>
-            <li><a href="#biography">B</a>
-            </li><li>
-                <a href="#designers">D</a>
-            </li><li>
-                <a href="#testimonials">T</a>
-            </li><li>
-                <a href="#strong-points">S</a>
+        <ul class="menu-mobile__list">
+            <li class="menu-mobile__list-item"><a class="menu-mobile__list-item-link link" href="#biography">B</a>
+            </li><li class="menu-mobile__list-item">
+                <a class="menu-mobile__list-item-link link" href="#designers">D</a>
+            </li><li class="menu-mobile__list-item">
+                <a class="menu-mobile__list-item-link link" href="#testimonials">T</a>
+            </li><li class="menu-mobile__list-item">
+                <a class="menu-mobile__list-item-link link" href="#strong-points">S</a>
             </li>
         </ul>
     </nav>
@@ -32,68 +32,68 @@
         </svg>
     </nav>
     <main>
-        <section id="main">
-            <div class="main-background">
-                <div class="main-title">
-                    <h1>Atlas Studio</h1>
-                    <h2>Modern Web Studio</h2>
+        <section class="promo">
+            <div class="promo__background">
+                <div class="promo__box title">
+                    <h1 class="title__name">Atlas Studio</h1>
+                    <h2 class="title__desc header">Modern Web Studio</h2>
                 </div>
             </div>
         </section>
-        <section id="biography">
-            <h2>Biography</h2>
-            <div class="biography-img">
+        <section class="biography">
+            <h2 class="biography__title header">Biography</h2>
+            <div class="biography__avatar">
                 <img src="image/biography-1.5x.png" alt="Biography">
             </div>
-            <div class="biography-description-container">
-                <div class="biography-description">
-                    <h3>Katya <br />Mills</h3>
-                    <div class="biography-description-role">
-                        <p>Art Director</p>
-                        <ul>
-                            <li>Scenography</li>
-                            <li>Styling</li>
-                            <li>Creative Photography</li>
-                            <li>Design</li>
+            <div class="biography__description-wrap">
+                <div class="biography__description-content biography-content">
+                    <h3 class="biography-content__name founder">Katya <br />Mills</h3>
+                    <div class="biography-content__roles founder-roles">
+                        <p class="founder-roles__main">Art Director</p>
+                        <ul class="founder-roles__sub list list--inline">
+                            <li class="founder-roles__sub-item list__item">Scenography</li>
+                            <li class="founder-roles__sub-item list__item">Styling</li>
+                            <li class="founder-roles__sub-item list__item">Creative Photography</li>
+                            <li class="founder-roles__sub-item list__item">Design</li>
                         </ul>
                     </div>
-                    <span class="dash">-</span>
-                    <blockquote>The more I deal with the work as something that is my own, as something that is
+                    <span class="biography-content__dash">-</span>
+                    <blockquote class="biography-content__credo quote">The more I deal with the work as something that is my own, as something that is
                         personal,
                         the more successful it is.</blockquote>
                 </div>
             </div>
         </section>
-        <section id="designers">
-            <h2>Designers</h2>
-            <div class="designers-container">
-                <div class="designers-carousel">
-                    <article id="designer1" class="selected">
-                        <img id="designer1-img" class="designer-img" src="image/designer_jess_wonder.png" alt="Jess Wonder">
-                        <div id="designer1-desc" class="designer-description">
-                            <h3>Jess Wonder</h3>
-                            <p>
+        <section class="designers">
+            <h2 class="designers__title header">Designers</h2>
+            <div class="designers__wrap">
+                <div class="designers__content carousel carousel--type--designer">
+                    <article id="designer1" class="carousel__item carousel__item--type--designer carousel__item--type--designer--selected card card--selected">
+                        <img id="designer1-img" class="card__img" src="image/designer_jess_wonder.png" alt="Jess Wonder">
+                        <div id="designer1-desc" class="card__description">
+                            <h3 class="card__description-title uppercase bold">Jess Wonder</h3>
+                            <p class="card__description-content">
                                 <span class="bold">From/</span> Be more flower
                                 <br />
                                 <span class="bold">Skills/</span> Design Strategy / Marketing
                             </p>
                         </div>
-                    </article><article id="designer2">
-                        <img id="designer2-img" class="designer-img" src="image/designer_kameron_clein.png"
+                    </article><article id="designer2" class="carousel__item carousel__item--type--designer card">
+                        <img id="designer2-img" class="card__img" src="image/designer_kameron_clein.png"
                             alt="Kameron Clein">
-                        <div id="designer2-desc" class="designer-description">
-                            <h3>Kameron Clein</h3>
-                            <p>
+                        <div id="designer2-desc" class="card__description">
+                            <h3 class="card__description-title uppercase bold">Kameron Clein</h3>
+                            <p class="card__description-content">
                                 <span class="bold">From/</span> Be more flower
                                 <br />
                                 <span class="bold">Skills/</span> Design Strategy / Marketing
                             </p>
                         </div>
-                    </article><article id="designer3">
-                        <img id="designer3-img" class="designer-img" src="image/designer_louisse_red.png" alt="LOUISSE RED">
-                        <div id="designer3-desc" class="designer-description">
-                            <h3>LOUISSE RED</h3>
-                            <p>
+                    </article><article id="designer3" class="carousel__item carousel__item--type--designer card">
+                        <img id="designer3-img" class="card__img" src="image/designer_louisse_red.png" alt="LOUISSE RED">
+                        <div id="designer3-desc" class="card__description">
+                            <h3 class="card__description-title uppercase bold">LOUISSE RED</h3>
+                            <p class="card__description-content">
                                 <span class="bold">From/</span> Be more flower
                                 <br />
                                 <span class="bold">Skills/</span> Design Strategy / Marketing
@@ -103,65 +103,65 @@
                 </div>
             </div>
         </section>
-        <section id="testimonials">
-            <h2>Testimonials</h2>
-            <div class="testimonial-website">
-                <ul>
-                    <li>
-                        <h4>Website</h4>
-                        <a href="www.whitepapers.com">www.whitepapers.com</a>
+        <section class="testimonials">
+            <h2 class="testimonials__title header">Testimonials</h2>
+            <div class="testimonials__examples work-examples">
+                <ul class="work-examples__list website-list">
+                    <li class="website-list__item">
+                        <h4 class="bold">Website</h4>
+                        <a class="normal link" href="www.whitepapers.com">www.whitepapers.com</a>
                     </li>
-                    <li>
-                        <h4>Creativity</h4>
-                        <a href="www.whitepapers.com">www.whitepapers.com</a>
+                    <li class="website-list__item">
+                        <h4 class="bold">Creativity</h4>
+                        <a class="normal link" href="www.whitepapers.com">www.whitepapers.com</a>
                     </li>
-                    <li>
-                        <h4>Creativity</h4>
-                        <a href="www.whitepapers.com">www.whitepapers.com</a>
+                    <li class="website-list__item">
+                        <h4 class="bold">Creativity</h4>
+                        <a class="normal link" href="www.whitepapers.com">www.whitepapers.com</a>
                     </li>
-                </ul><div class="testimonial-website-img">
-                    <img src="image/keghan-crossland.png" alt="Creativity">
+                </ul><div class="work-examples__image">
+                    <img class="image" src="image/keghan-crossland.png" alt="Creativity">
                 </div>
-            </div><div class="testimonial-quote">
-                <blockquote>I just really want to do good work and work with some great people, people who challange me.
+            </div><div class="testimonials__quote card-quote">
+                <blockquote class="card-quote__content">I just really want to do good work and work with some great people, people who challange me.
                 </blockquote>
-                <img src="image/sinitta-leunen.png" alt="Img">
+                <img class="card-quote__image" src="image/sinitta-leunen.png" alt="Img">
             </div>
         </section>
-        <section id="strong-points">
-            <h2>Strong points</h2>
-            <div class="strong-points-container">
-                <div class="strong-points-carousel">
-                    <div class="strong-points-carousel-item">
+        <section class="strong-points">
+            <h2 class="strong-points__title header">Strong points</h2>
+            <div class="strong-points__wrap">
+                <div class="strong-points__content carousel carousel--type--strength">
+                    <div class="carousel__item carousel__item--type--strength">
                         <img src="image/dawid-liberadzki.png" alt="Img1">
                     </div>
-                    <div class="strong-points-carousel-item">
+                    <div class="carousel__item carousel__item--type--strength">
                         <img src="image/avery-klein.png" alt="Img2">
                     </div>
-                    <div class="strong-points-carousel-item strong-points-carousel-item-list">
-                        <h3>Strengths</h3>
-                        <ul>
-                            <li>Interiors</li>
-                            <li>Outdoors</li>
-                            <li>Portraits</li>
-                            <li>Styling</li>
-                            <li>Events</li>
-                            <li>Architecture</li>
-                            <li>Design</li>
-                            <li>Celebrations</li>
-                            <li>Artistic</li>
-                            <li>Fashion</li>
-                            <li>Nature</li>
-                            <li>Creativity</li>
+                    <div class="carousel__item carousel__item--type--strength carousel__item--type--strength-list strengths-list">
+                        <h3 class="strengths-list__title">Strengths</h3>
+                        <ul class="strengths-list__content list">
+                            <li class="list__item">Interiors</li>
+                            <li class="list__item">Outdoors</li>
+                            <li class="list__item">Portraits</li>
+                            <li class="list__item">Styling</li>
+                            <li class="list__item">Events</li>
+                            <li class="list__item">Architecture</li>
+                            <li class="list__item">Design</li>
+                            <li class="list__item">Celebrations</li>
+                            <li class="list__item">Artistic</li>
+                            <li class="list__item">Fashion</li>
+                            <li class="list__item">Nature</li>
+                            <li class="list__item">Creativity</li>
                         </ul>
                     </div>
-                    <div class="strong-points-carousel-item">
+                    <div class="carousel__item carousel__item--type--strength">
                         <img src="image/avery-klein.png" alt="Img3">
                     </div>
                 </div>
             </div>
         </section>
-        <div class="empty-block-for-menu-mobile"></section>
+        <div class="empty-block-for-menu-mobile"></div>
     </main>
 </body>
 

@@ -1,0 +1,8 @@
+@media screen and (min-width: 1px) {
+    .founder {
+        font-family: 'Butler', serif;
+        font-weight: 300;
+        font-size: 4.5rem;
+        line-height: 1em;
+    }
+}

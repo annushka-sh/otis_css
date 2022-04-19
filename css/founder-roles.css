@@ -1,0 +1,26 @@
+@media screen and (min-width: 1px) {
+    .founder-roles {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 1.125rem;
+        color: #636363;
+    }
+
+    .founder-roles .founder-roles__sub {
+        vertical-align: middle;
+    }
+
+    .founder-roles .founder-roles__sub .founder-roles__sub-item:not(:last-child):after {
+        content: " /";
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .founder-roles {
+        font-size: 1rem;
+    }
+
+    .founder-roles .founder-roles__sub-item {
+        display: inline;
+    }
+}

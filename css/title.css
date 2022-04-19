@@ -1,0 +1,58 @@
+@media screen and (min-width: 1px) {
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        font-size: 4rem;
+    }
+
+    .title .title__name {
+        font-family: 'Butler', serif;
+        font-weight: 300;
+        font-size: 1em;
+        margin: 0.5em 0;
+    }
+
+    .title .title__desc {
+        margin-bottom: 1.5em;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .title {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1em 0.6em 0.9em;
+    }
+
+    .title .title__name {
+        margin: 0;
+    }
+
+    .title .title__desc {
+        position: absolute;
+        margin-bottom: -6.5em;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .title {
+        font-size: 4.5rem;
+        padding: 1.5em 1em 1.4em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .title {
+        font-size: 5.45rem;
+    }
+}
