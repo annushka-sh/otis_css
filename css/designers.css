@@ -198,7 +198,6 @@
 
     #designers .designers-carousel article {
         width: calc(25% - 1rem);
-        /*transition: all 400ms ease;*/
     }
 
     @supports(display: flex) {
@@ -223,6 +222,14 @@
 
         #designers .designers-carousel article:first-child:hover {
             padding-left: 0;
+        }
+
+        #designers .designers-carousel article .designer-img  {
+            transition: all 1s ease-out 0.3s;
+        }
+
+        #designers .designers-carousel article:hover .designer-img  {
+            height: 80%;
         }
 
         #designers .designers-carousel article .designer-description {

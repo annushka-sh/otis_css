@@ -17,6 +17,7 @@
         display: inline-block;
         list-style-type: none;
         width: 18.6%;
+        white-space: nowrap;
     }
 
     nav.menu-mobile ul li a {
@@ -28,17 +29,41 @@
         display: none;
     }
 
-    nav.menu-mobile ul li:active, nav.menu-mobile ul li:hover {
+    nav.menu-mobile ul li:active,
+    nav.menu-mobile ul li:hover {
         background-color: #383434;
-        width: 44%;
+        animation: typewriter 1s steps(20) 0.25s 1 normal both,
+            blinkTextCursor 100ms steps(20) infinite normal;
     }
 
-    nav.menu-mobile ul li:active a, nav.menu-mobile ul li:hover a {
+    nav.menu-mobile ul li:active a,
+    nav.menu-mobile ul li:hover a {
         color: #fff;
     }
 
-    nav.menu-mobile ul li:active a span, nav.menu-mobile ul li:hover a span {
+    nav.menu-mobile ul li:active a span,
+    nav.menu-mobile ul li:hover a span {
         display: inline;
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 3rem;
+        }
+
+        to {
+            width: 60%;
+        }
+    }
+
+    @keyframes blinkTextCursor {
+        from {
+            border-right-color: rgba(255, 255, 255, .75);
+        }
+
+        to {
+            border-right-color: transparent;
+        }
     }
 
     nav.menu-desktop {
@@ -56,7 +81,9 @@
             justify-content: space-around;
             flex-basis: 15%;
         }
-        nav.menu-mobile ul li, nav.menu-mobile ul li:active, nav.menu-mobile ul li:hover  {
+
+        nav.menu-mobile ul li, nav.menu-mobile ul li:active,
+        nav.menu-mobile ul li:hover {
             width: unset;
             padding: 0 0.25em;
             border-radius: 0.25em;
