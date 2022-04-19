@@ -1,0 +1,55 @@
+@media screen and (min-width: 1px) {
+    .menu-mobile {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: #fff;
+        font-family: 'Butler', serif;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+        padding: 0.5em;
+    }
+
+    .menu-mobile .menu-mobile__list-item {
+        display: inline-block;
+        list-style-type: none;
+        width: 25%;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .empty-block-for-menu-mobile {
+        height: 4.5rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .menu-mobile {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu-mobile,
+    .empty-block-for-menu-mobile {
+        display: none;
+    }
+
+    .menu-desktop {
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: #fff;
+    }
+
+    .menu-desktop svg {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}

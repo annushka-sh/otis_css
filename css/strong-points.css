@@ -1,0 +1,95 @@
+@media screen and (min-width: 1px) {
+    .strong-points {
+        position: relative;
+    }
+
+    .strong-points .strong-points__title {
+        position: absolute;
+        top: 17.5%;
+        right: 2rem;
+    }
+
+    .strong-points .strong-points__wrap {
+        position: absolute;
+        height: 70%;
+        width: 100%;
+        top: 90%;
+        transform: translateY(-90%);
+    }
+    
+    @supports(display: flex) {
+        .strong-points {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .strong-points .strong-points__wrap {
+            position: unset;
+            transform: none;
+            flex-basis: 72%;
+            height: unset;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .strong-points .strong-points__title {
+        top: 1em;
+    }
+
+    .strong-points .strong-points__wrap {
+        height: 90%;
+    }
+
+    @supports(display: flex) {
+        .strong-points .strong-points__wrap {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .strong-points .strong-points__title {
+        top: 7.5%;
+    }
+
+    .strong-points .strong-points__wrap {
+        height: 80%;
+    }
+
+    @supports(display: flex) {
+        .strong-points .strong-points__wrap {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .strong-points .strong-points__title {
+        top: 20%;
+        left: 33%;
+        transform: rotate(270deg);
+        transform-origin: left bottom;
+    }
+
+    .strong-points .strong-points__wrap {
+        height: 75%;
+    }
+
+    @supports(display: flex) {
+        .strong-points .strong-points__wrap {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .strong-points .strong-points__title {
+        top: 29%;
+    }
+    .strong-points .strong-points__wrap {
+        height: 71.5%;
+    }
+}

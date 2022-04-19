@@ -1,0 +1,49 @@
+@media screen and (min-width: 1px) {
+    .designers {
+        position: relative;
+    }
+
+    .designers .designers__title {
+        display: block;
+        position: absolute;
+        top: calc((15% - 1em)/2);
+        right: 2rem;
+    }
+
+    .designers .designers__wrap {
+        position: absolute;
+        height: 70%;
+        width: 100%;
+        top: 45%;
+        transform: translateY(-45%);
+    }
+
+    .designers .designers__content {
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .designers .designers__wrap {
+        top: 45%;
+        transform: translateY(-45%);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .designers .designers__title {
+        left: calc((100% - 3.5rem)*0.75 - 0.5rem);
+        top: 18%;
+        transform: rotate(270deg);
+        transform-origin: bottom left;
+        background: inherit;
+        -webkit-background-clip: text;
+        background-clip: text;
+        filter: grayscale(1) contrast(5) drop-shadow(0.1em 0.1em white);
+        z-index: 1;
+    }
+
+    .designers .designers__wrap {
+        padding-right: 3.5rem;
+    }
+}
