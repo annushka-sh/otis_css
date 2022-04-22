@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+:root {
+    font-size: 12px;
+}
+
+body {
+    /*position: relative;*/
+    background: #FFFFFF;
+    color: #000;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+section {
+    min-height: 480px;
+    height: 100vh;
+    /*height: -webkit-fill-available;*/
+    width: 100%;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+/*mobile devices: from 1 to 575px*/
+@media screen and (min-width: 1px) {
+    section {
+        min-height: 600px;
+    }
+
+    #biography h2,
+    #designers h2,
+    #testimonials h2 {
+        display: block;
+        position: absolute;
+        right: 2rem;
+    }
+}
+
+/*landscape phones: from 576px to 767px*/
+@media screen and (min-width: 576px) {
+    :root {
+        font-size: 14px;
+    }
+
+    section {
+        min-height: 360px;
+    }
+}
+
+/*tablets: from 768px to 991px*/
+@media screen and (min-width: 768px) {
+    :root {
+        font-size: 16px;
+    }
+
+    section {
+        min-height: 480px;
+    }
+
+    h2 {
+        font-size: 1.125rem;
+    }
+}
+
+/*desktops: from 992px to 1199px*/
+@media screen and (min-width: 992px) {
+    section {
+        min-height: 600px;
+    }
+}
+
+/*large desktops*/
+@media screen and (min-width: 1200px) {
+    section {
+        min-height: 700px;
+    }
+}

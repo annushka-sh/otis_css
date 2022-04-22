@@ -1,0 +1,122 @@
+/*mobile devices: from 1 to 575px*/
+@media screen and (min-width: 1px) {
+    nav.menu-mobile {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: #fff;
+        font-family: 'Butler', serif;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+        padding: 0.5em;
+    }
+
+    nav.menu-mobile ul li {
+        display: inline-block;
+        list-style-type: none;
+        width: 18.6%;
+        white-space: nowrap;
+    }
+
+    nav.menu-mobile ul li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    nav.menu-mobile ul li a span {
+        display: none;
+    }
+
+    nav.menu-mobile ul li:active,
+    nav.menu-mobile ul li:hover {
+        background-color: #383434;
+        animation: typewriter 1s steps(20) 0.25s 1 normal both,
+            blinkTextCursor 100ms steps(20) infinite normal;
+    }
+
+    nav.menu-mobile ul li:active a,
+    nav.menu-mobile ul li:hover a {
+        color: #fff;
+    }
+
+    nav.menu-mobile ul li:active a span,
+    nav.menu-mobile ul li:hover a span {
+        display: inline;
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 3rem;
+        }
+
+        to {
+            width: 60%;
+        }
+    }
+
+    @keyframes blinkTextCursor {
+        from {
+            border-right-color: rgba(255, 255, 255, .75);
+        }
+
+        to {
+            border-right-color: transparent;
+        }
+    }
+
+    nav.menu-desktop {
+        display: none;
+    }
+
+    .empty-block-for-menu-mobile {
+        height: 4.5rem;
+    }
+
+    @supports(display: flex) {
+        nav.menu-mobile ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-basis: 15%;
+        }
+
+        nav.menu-mobile ul li, nav.menu-mobile ul li:active,
+        nav.menu-mobile ul li:hover {
+            width: unset;
+            padding: 0 0.25em;
+            border-radius: 0.25em;
+        }
+    }
+}
+
+/*landscape phones: from 576px to 767px*/
+@media screen and (min-width: 576px) {
+    nav.menu-mobile {
+        font-size: 2rem;
+    }
+}
+
+/*tablets: from 768px to 991px*/
+@media screen and (min-width: 768px) {
+
+    nav.menu-mobile,
+    .empty-block-for-menu-mobile {
+        display: none;
+    }
+
+    nav.menu-desktop {
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: #fff;
+    }
+
+    nav.menu-desktop svg {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}

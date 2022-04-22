@@ -1,0 +1,101 @@
+/*mobile devices: from 1 to 575px*/
+@media screen and (min-width: 1px) {
+
+    /*page 1*/
+    section {
+        min-height: 600px;
+    }
+
+    #main {
+        text-align: center;
+    }
+
+    #main .main-background {
+        height: 100%;
+        background-color: #cccccc;
+        background-image: url("../image/main-1.5x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    #main .main-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        font-size: 4rem;
+        height: 40%;
+        background-color: #fff;
+    }
+
+    #main .main-title h1 {
+        font-family: 'Butler', serif;
+        font-weight: 300;
+        font-size: 1em;
+        margin: 0.5em 0;
+    }
+
+    #main .main-title h2 {
+        margin-bottom: 1.5em;
+    }
+}
+
+/*landscape phones: from 576px to 767px*/
+@media screen and (min-width: 576px) {
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #main .main-background {
+        height: 70%;
+        width: 74%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #main .main-title {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        height: min-content;
+        padding: 1em 0.6em 0.9em;
+    }
+
+    #main .main-title h1 {
+        margin: 0;
+    }
+
+    #main .main-title h2 {
+        position: absolute;
+        margin-bottom: -6.5em;
+        left: 0;
+        right: 0;
+    }
+}
+
+/*tablets: from 768px to 991px*/
+@media screen and (min-width: 768px) {
+    #main .main-title {
+        font-size: 4rem;
+    }
+}
+
+/*desktops: from 992px to 1199px*/
+@media screen and (min-width: 992px) {
+    #main .main-title {
+        font-size: 4.5rem;
+        padding: 1.5em 1em 1.4em;
+    }
+}
+
+/*large desktops*/
+@media screen and (min-width: 1200px) {
+    #main .main-title {
+        font-size: 5.45rem;
+    }
+}
