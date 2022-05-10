@@ -14,13 +14,13 @@
 <body>
     <nav class="menu-mobile">
         <ul class="menu-mobile__list">
-            <li class="menu-mobile__list-item"><a class="menu-mobile__list-item-link link" href="#biography">B</a>
+            <li class="menu-mobile__list-item"><a class="link menu-mobile__list-item-link" href="#biography">B</a>
             </li><li class="menu-mobile__list-item">
-                <a class="menu-mobile__list-item-link link" href="#designers">D</a>
+                <a class="link menu-mobile__list-item-link" href="#designers">D</a>
             </li><li class="menu-mobile__list-item">
-                <a class="menu-mobile__list-item-link link" href="#testimonials">T</a>
+                <a class="link menu-mobile__list-item-link" href="#testimonials">T</a>
             </li><li class="menu-mobile__list-item">
-                <a class="menu-mobile__list-item-link link" href="#strong-points">S</a>
+                <a class="link menu-mobile__list-item-link" href="#strong-points">S</a>
             </li>
         </ul>
     </nav>
@@ -34,23 +34,23 @@
     <main>
         <section class="promo">
             <div class="promo__background">
-                <div class="promo__box title">
+                <div class="title promo__box">
                     <h1 class="title__name">Atlas Studio</h1>
-                    <h2 class="title__desc header">Modern Web Studio</h2>
+                    <h2 class="header title__desc">Modern Web Studio</h2>
                 </div>
             </div>
         </section>
-        <section class="biography">
-            <h2 class="biography__title header">Biography</h2>
+        <section id="biography" class="biography">
+            <h2 class="header biography__title">Biography</h2>
             <div class="biography__avatar">
                 <img src="image/biography-1.5x.png" alt="Biography">
             </div>
             <div class="biography__description-wrap">
-                <div class="biography__description-content biography-content">
-                    <h3 class="biography-content__name founder">Katya <br />Mills</h3>
-                    <div class="biography-content__roles founder-roles">
+                <div class="biography-content biography__description-content">
+                    <h3 class="founder biography-content__name">Katya <br />Mills</h3>
+                    <div class="founder-roles biography-content__roles">
                         <p class="founder-roles__main">Art Director</p>
-                        <ul class="founder-roles__sub list list--inline">
+                        <ul class="list list--inline founder-roles__sub">
                             <li class="founder-roles__sub-item list__item">Scenography</li>
                             <li class="founder-roles__sub-item list__item">Styling</li>
                             <li class="founder-roles__sub-item list__item">Creative Photography</li>
@@ -58,18 +58,19 @@
                         </ul>
                     </div>
                     <span class="biography-content__dash">-</span>
-                    <blockquote class="biography-content__credo quote">The more I deal with the work as something that is my own, as something that is
-                        personal,
-                        the more successful it is.</blockquote>
+                    <blockquote class="quote biography-content__credo">The more I deal with the work as something that
+                        is my own, as something that is personal, the more successful it is.</blockquote>
                 </div>
             </div>
         </section>
-        <section class="designers">
-            <h2 class="designers__title header">Designers</h2>
+        <section id="designers" class="designers">
+            <h2 class="header designers__title">Designers</h2>
             <div class="designers__wrap">
-                <div class="designers__content carousel carousel--type--designer">
-                    <article id="designer1" class="carousel__item carousel__item--type--designer carousel__item--type--designer--selected card card--selected">
-                        <img id="designer1-img" class="card__img" src="image/designer_jess_wonder.png" alt="Jess Wonder">
+                <div class="carousel carousel--type--designer designers__content">
+                    <article id="designer1"
+                        class="card card--selected carousel__item carousel__item--type--designer carousel__item--type--designer--selected">
+                        <img id="designer1-img" class="card__img" src="image/designer_jess_wonder.png"
+                            alt="Jess Wonder">
                         <div id="designer1-desc" class="card__description">
                             <h3 class="card__description-title uppercase bold">Jess Wonder</h3>
                             <p class="card__description-content">
@@ -78,7 +79,8 @@
                                 <span class="bold">Skills/</span> Design Strategy / Marketing
                             </p>
                         </div>
-                    </article><article id="designer2" class="carousel__item carousel__item--type--designer card">
+                    </article>
+                    <article id="designer2" class="card carousel__item carousel__item--type--designer">
                         <img id="designer2-img" class="card__img" src="image/designer_kameron_clein.png"
                             alt="Kameron Clein">
                         <div id="designer2-desc" class="card__description">
@@ -89,8 +91,10 @@
                                 <span class="bold">Skills/</span> Design Strategy / Marketing
                             </p>
                         </div>
-                    </article><article id="designer3" class="carousel__item carousel__item--type--designer card">
-                        <img id="designer3-img" class="card__img" src="image/designer_louisse_red.png" alt="LOUISSE RED">
+                    </article>
+                    <article id="designer3" class="card carousel__item carousel__item--type--designer">
+                        <img id="designer3-img" class="card__img" src="image/designer_louisse_red.png"
+                            alt="LOUISSE RED">
                         <div id="designer3-desc" class="card__description">
                             <h3 class="card__description-title uppercase bold">LOUISSE RED</h3>
                             <p class="card__description-content">
@@ -103,10 +107,10 @@
                 </div>
             </div>
         </section>
-        <section class="testimonials">
-            <h2 class="testimonials__title header">Testimonials</h2>
-            <div class="testimonials__examples work-examples">
-                <ul class="work-examples__list website-list">
+        <section id="testimonials" class="testimonials">
+            <h2 class="header testimonials__title">Testimonials</h2>
+            <div class="work-examples testimonials__examples">
+                <ul class="website-list work-examples__list">
                     <li class="website-list__item">
                         <h4 class="bold">Website</h4>
                         <a class="normal link" href="www.whitepapers.com">www.whitepapers.com</a>
@@ -119,26 +123,29 @@
                         <h4 class="bold">Creativity</h4>
                         <a class="normal link" href="www.whitepapers.com">www.whitepapers.com</a>
                     </li>
-                </ul><div class="work-examples__image">
+                </ul>
+                <div class="work-examples__image">
                     <img class="image" src="image/keghan-crossland.png" alt="Creativity">
                 </div>
-            </div><div class="testimonials__quote card-quote">
-                <blockquote class="card-quote__content">I just really want to do good work and work with some great people, people who challange me.
+            </div>
+            <div class="card-quote testimonials__quote">
+                <blockquote class="card-quote__content">I just really want to do good work and work with some great
+                    people, people who challange me.
                 </blockquote>
                 <img class="card-quote__image" src="image/sinitta-leunen.png" alt="Img">
             </div>
         </section>
-        <section class="strong-points">
-            <h2 class="strong-points__title header">Strong points</h2>
+        <section id="strong-points" class="strong-points">
+            <h2 class="header strong-points__title">Strong points</h2>
             <div class="strong-points__wrap">
-                <div class="strong-points__content carousel carousel--type--strength">
+                <div class="carousel carousel--type--strength strong-points__content">
                     <div class="carousel__item carousel__item--type--strength">
                         <img src="image/dawid-liberadzki.png" alt="Img1">
                     </div>
                     <div class="carousel__item carousel__item--type--strength">
                         <img src="image/avery-klein.png" alt="Img2">
                     </div>
-                    <div class="carousel__item carousel__item--type--strength carousel__item--type--strength-list strengths-list">
+                    <div class="strengths-list carousel__item carousel__item--type--strength carousel__item--type--strength-list">
                         <h3 class="strengths-list__title">Strengths</h3>
                         <ul class="strengths-list__content list">
                             <li class="list__item">Interiors</li>
