@@ -5,142 +5,150 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Mod Studio</title>
 </head>
 
 <body>
-    <nav class="menu-mobile">
+    <nav class="menu-mobile fixed-bottom w-100 bg-body text-center p-1 d-md-none">
         <ul>
-            <li><a href="#biography">B</a>
-            </li><li>
-                <a href="#designers">D</a>
-            </li><li>
-                <a href="#testimonials">T</a>
-            </li><li>
-                <a href="#strong-points">S</a>
+            <li class="d-inline-block w-25"><a class="text-decoration-none text-body fw-normal" href="#biography">B</a>
+            </li><li class="d-inline-block w-25">
+                <a class="text-decoration-none text-body fw-normal" href="#designers">D</a>
+            </li><li class="d-inline-block w-25">
+                <a class="text-decoration-none text-body fw-normal" href="#testimonials">T</a>
+            </li><li class="d-inline-block w-25">
+                <a class="text-decoration-none text-body fw-normal" href="#strong-points">S</a>
             </li>
         </ul>
     </nav>
-    <nav class="menu-desktop">
-        <svg viewBox="0 0 100 100" width="25" height="40">
+    <nav class="menu-desktop bg-body d-none d-md-block sticky-top">
+        <svg class="d-md-block mx-auto" viewBox="0 0 100 100" width="25" height="40">
             <rect y="30" width="100" height="2"></rect>
             <rect y="50" width="100" height="2"></rect>
             <rect y="70" width="100" height="2"></rect>
         </svg>
     </nav>
-    <main>
-        <section id="main">
-            <div class="main-background">
-                <div class="main-title">
-                    <h1>Atlas Studio</h1>
-                    <h2>Modern Web Studio</h2>
+    <main class="container bg-body">
+        <section id="main" class="row vh-100 justify-content-center">
+            <div id="main-img" class="row col-12 col-sm-9 justify-content-sm-center align-self-sm-center px-0 mx-0">
+                <div id="main-title"
+                    class="row position-relative col-12 align-items-end col-sm-10 col-md-9 align-self-sm-center align-items-sm-center text-center px-0 mx-0 bg-body">
+                    <h1 class="fw-light m-0">Atlas Studio</h1>
+                    <h2 class="position-absolute fw-bold">Modern Web Studio</h2>
                 </div>
             </div>
         </section>
-        <section id="biography">
-            <h2>Biography</h2>
-            <div class="biography-img">
+        <section id="biography" class="row vh-100 position-relative justify-content-center">
+            <h2 class="position-absolute w-auto p-0 header">Biography</h2>
+            <div id="biography-img" class="col-12 order-1 col-sm-5 offset-sm-1">
                 <img src="image/biography-1.5x.png" alt="Biography">
             </div>
-            <div class="biography-description-container">
-                <div class="biography-description">
-                    <h3>Katya <br />Mills</h3>
-                    <div class="biography-description-role">
-                        <p>Art Director</p>
-                        <ul>
-                            <li>Scenography</li>
-                            <li>Styling</li>
-                            <li>Creative Photography</li>
-                            <li>Design</li>
-                        </ul>
-                    </div>
-                    <span class="dash">-</span>
-                    <blockquote>The more I deal with the work as something that is my own, as something that is
-                        personal,
-                        the more successful it is.</blockquote>
+            <div id="biography-description" class="row col-12 col-sm-5 order-sm-1 offset-lg-1 gy-sm-5">
+                <h3 class="col-12 order-last align-self-end order-sm-1 mt-0 fw-light">Katya <br
+                        class="d-none d-sm-inline" />Mills</h3>
+                <div id="biography-role" class="col-12 order-sm-2">
+                    <p class="mb-0">Art Director</p>
+                    <ul class="p-0 d-sm-inline-block">
+                        <li class="d-sm-inline">Scenography</li>
+                        <li class="d-sm-inline">Styling</li>
+                        <li class="d-sm-inline">Creative Photography</li>
+                        <li class="d-sm-inline">Design</li>
+                    </ul>
+                </div>
+                <div id="biography-quote" class="col-12 order-sm-3">
+                    <span class="dash d-none d-sm-block fw-bold">-</span>
+                    <blockquote>The more I deal with the work as something that is my own, as
+                        something that is personal, the more successful it is.</blockquote>
                 </div>
             </div>
         </section>
-        <section id="designers">
-            <h2>Designers</h2>
-            <div class="designers-container">
-                <div class="designers-carousel">
-                    <article id="designer1" class="selected">
-                        <img id="designer1-img" class="designer-img" src="image/designer_jess_wonder.png" alt="Jess Wonder">
-                        <div id="designer1-desc" class="designer-description">
-                            <h3>Jess Wonder</h3>
-                            <p>
-                                <span class="bold">From/</span> Be more flower
+        <section id="designers" class="row vh-100 position-relative align-items-center">
+            <h2 class="position-absolute w-auto p-0 header">Designers</h2>
+            <div class="designers-container row w-100 px-0 mx-0">
+                <div class="designers-carousel row h-100 w-auto align-items-baseline flex-nowrap px-0 mx-0">
+                    <article class="designers-carousel-item card selected h-100 col-5 col-sm-6 col-md-5 col-lg-5 ps-0">
+                        <img src="image/designer_jess_wonder.png"
+                            class="card-img-top" alt="Jess Wonder">
+                        <div class="designer-description card-body px-0 pb-0">
+                            <h3 class="card-title fw-light fw-bold fs-6 mb-0">Jess Wonder</h3>
+                            <p class="card-text fw-normal">
+                                <span class="fw-bold">From/</span> Be more flower
                                 <br />
-                                <span class="bold">Skills/</span> Design Strategy / Marketing
+                                <span class="fw-bold">Skills/</span> Design Strategy / Marketing
                             </p>
                         </div>
-                    </article><article id="designer2">
-                        <img id="designer2-img" class="designer-img" src="image/designer_kameron_clein.png"
-                            alt="Kameron Clein">
-                        <div id="designer2-desc" class="designer-description">
-                            <h3>Kameron Clein</h3>
-                            <p>
-                                <span class="bold">From/</span> Be more flower
+                    </article>
+                    <article class="designers-carousel-item card h-100 col-5 col-sm-6 col-md-5 col-lg-4 offset-lg-1 ps-0">
+                        <img src="image/designer_kameron_clein.png"
+                            class="card-img-top" alt="Kameron Clein">
+                        <div class="designer-description card-body px-0 pb-0">
+                            <h3 class="card-title fw-light fw-bold fs-6 mb-0">Kameron Clein</h3>
+                            <p class="card-text fw-normal">
+                                <span class="fw-bold">From/</span> Be more flower
                                 <br />
-                                <span class="bold">Skills/</span> Design Strategy / Marketing
+                                <span class="fw-bold">Skills/</span> Design Strategy / Marketing
                             </p>
                         </div>
-                    </article><article id="designer3">
-                        <img id="designer3-img" class="designer-img" src="image/designer_louisse_red.png" alt="LOUISSE RED">
-                        <div id="designer3-desc" class="designer-description">
-                            <h3>LOUISSE RED</h3>
-                            <p>
-                                <span class="bold">From/</span> Be more flower
+                    </article>
+                    <article class="designers-carousel-item card h-100 col-5 col-sm-6 col-md-5 col-lg-4 ps-0">
+                        <img src="image/designer_louisse_red.png"
+                            class="card-img-top" alt="Louisse Red">
+                        <div class="designer-description card-body px-0 pb-0">
+                            <h3 class="card-title fw-light fw-bold fs-6 mb-0">Louisse Red</h3>
+                            <p class="card-text fw-normal">
+                                <span class="fw-bold">From/</span> Be more flower
                                 <br />
-                                <span class="bold">Skills/</span> Design Strategy / Marketing
+                                <span class="fw-bold">Skills/</span> Design Strategy / Marketing
                             </p>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
-        <section id="testimonials">
-            <h2>Testimonials</h2>
-            <div class="testimonial-website">
-                <ul>
-                    <li>
-                        <h4>Website</h4>
-                        <a href="www.whitepapers.com">www.whitepapers.com</a>
+        <section id="testimonials" class="row vh-100 position-relative">
+            <h2 class="position-absolute w-auto p-0 header">Testimonials</h2>
+            <div id="testimonial-website" class="row col-12 col-md-6 order-md-first align-items-sm-end px-0 mx-0">
+                <ul class="row col-md-12 col-lg-2 order-lg-first px-0 mx-0 justify-content-lg-around align-items-md-end flex-lg-column flex-lg-nowrap fs-6">
+                    <li class="col-auto px-0">
+                        <h4 class="fw-bold fs-6 mb-0">Website</h4>
+                        <a href="www.whitepapers.com" class="text-decoration-none text-body fw-normal">www.whitepapers.com</a>
                     </li>
-                    <li>
-                        <h4>Creativity</h4>
-                        <a href="www.whitepapers.com">www.whitepapers.com</a>
+                    <li class="col-auto px-0">
+                        <h4 class="fw-bold fs-6 mb-0">Creativity</h4>
+                        <a href="www.whitepapers.com" class="text-decoration-none text-body fw-normal">www.whitepapers.com</a>
                     </li>
-                    <li>
-                        <h4>Creativity</h4>
-                        <a href="www.whitepapers.com">www.whitepapers.com</a>
+                    <li class="col-auto px-0">
+                        <h4 class="fw-bold fs-6 mb-0">Creativity</h4>
+                        <a href="www.whitepapers.com" class="text-decoration-none text-body fw-normal">www.whitepapers.com</a>
                     </li>
-                </ul><div class="testimonial-website-img">
-                    <img src="image/keghan-crossland.png" alt="Creativity">
+                </ul>
+                <div id="testimonial-container-img" class="row d-none col-md-12 order-md-first col-lg-10 d-md-block px-0 mx-0">
+                    <img class="px-0 mx-0" src="image/keghan-crossland.png" alt="Creativity">
                 </div>
-            </div><div class="testimonial-quote">
-                <blockquote>I just really want to do good work and work with some great people, people who challange me.
+            </div>
+            <div id="testimonial-quote" class="row col-12 col-md-4 offset-md-1 col-xl-2 offset-xl-2 position-relative align-items-center order-first px-0">
+                <blockquote class="bg-body text-center col-sm-6 order-xl-first">I just really want to do good work and work with some great people, people who challange me.
                 </blockquote>
-                <img src="image/sinitta-leunen.png" alt="Img">
+                <img class="col-sm-6 order-sm-first col-md-12" src="image/sinitta-leunen.png" alt="Img">
             </div>
         </section>
-        <section id="strong-points">
-            <h2>Strong points</h2>
-            <div class="strong-points-container">
-                <div class="strong-points-carousel">
-                    <div class="strong-points-carousel-item">
-                        <img src="image/dawid-liberadzki.png" alt="Img1">
+        <section id="strong-points" class="row vh-100 position-relative align-items-end">
+            <h2 class="position-absolute w-auto header">Strong points</h2>
+            <div class="strong-points-container row w-100 px-0 mx-0">
+                <div class="strong-points-carousel row h-100 w-auto justify-content-between align-items-end flex-nowrap px-0 mx-0 g-col-6">
+                    <div class="strong-points-carousel-item-image col-6 col-md-4 card px-0">
+                        <img class="card-img-top" src="image/dawid-liberadzki.png" alt="Img1">
                     </div>
-                    <div class="strong-points-carousel-item">
-                        <img src="image/avery-klein.png" alt="Img2">
+                    <div class="strong-points-carousel-item-image col-6 col-md-4 card px-0">
+                        <img class="card-img-top" src="image/avery-klein.png" alt="Img2">
                     </div>
-                    <div class="strong-points-carousel-item strong-points-carousel-item-list">
-                        <h3>Strengths</h3>
-                        <ul>
+                    <div class="strong-points-carousel-item-list col-auto col-md-4 offset-xl-2 h-100 card px-0 fw-light">
+                        <h3 class="card-title position-absolute fw-light">Strengths</h3>
+                        <ul class="card-text position-relative">
                             <li>Interiors</li>
                             <li>Outdoors</li>
                             <li>Portraits</li>
@@ -155,14 +163,17 @@
                             <li>Creativity</li>
                         </ul>
                     </div>
-                    <div class="strong-points-carousel-item">
-                        <img src="image/avery-klein.png" alt="Img3">
+                    <div class="strong-points-carousel-item-image col-6 col-md-4 offset-xl-2 card px-0">
+                        <img class="card-img-top" src="image/avery-klein.png" alt="Img3">
                     </div>
                 </div>
             </div>
         </section>
-        <div class="empty-block-for-menu-mobile"></section>
+        <div class="empty-block-for-menu-mobile d-md-none"></section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
