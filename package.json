@@ -1,0 +1,35 @@
+{
+  "name": "otus-css-asharkova",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "minify-css": "cleancss -o css/style.min.css css/style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annushka-sh/otus-css-asharkova.git"
+  },
+  "author": "Anna Sharkova",
+  "license": "ISC",
+  "homepage": "https://github.com/annushka-sh/otus-css-asharkova#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.5",
+    "clean-css-cli": "^5.5.2",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}
