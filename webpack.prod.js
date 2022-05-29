@@ -1,19 +1,16 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: path.join(__dirname, "src", "index.js"),
-  mode: "development",
+  mode: 'production',
   output: {
-    path: path.join(__dirname, "dist"),
-    filename: "main.js"
+    path: path.join(__dirname, "public"),
+    filename: "[name].[contenthash].js",
+    clean: true,
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: path.join(__dirname, "src", "index.html"),
-    })
-  ],
   module: {
     rules: [
       {
@@ -25,8 +22,9 @@ module.exports = {
       },
       {
         test: /\.css$/i,
+        exclude: /node_modules/,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader",
         ]
       },
@@ -42,9 +40,21 @@ module.exports = {
       },
     ]
   },
-  devServer: {
-    compress: false,
-    open: "/",
-    port: 3001
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Production',
+      filename: "index.html",
+      template: path.join(__dirname, "src", "index.html"),
+    }),
+    new MiniCssExtractPlugin({
+      ignoreOrder: true,
+      filename: "[name].[contenthash].css",
+    })
+  ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new CssMinimizerPlugin(),
+    ]
   }
 }
