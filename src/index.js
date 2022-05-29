@@ -2,8 +2,8 @@
 import "./css/normalize.css";
 import "./css/font.css";
 import "./css/style.css";
-/*image
-import "./image/main-1.5x.png";*/
+/*image*/
+import "./image/main-1.5x.png";
 import "./image/biography-1.5x.png";
 import "./image/sinitta-leunen.png";
 import "./image/avery-klein.png";

@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: path.join(__dirname, "src", "css", "index.html"),
+      template: path.join(__dirname, "src", "index.html"),
     })
   ],
   module: {
@@ -32,18 +32,13 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png)$/i,
-        loader: "file-loader",
-        options: {
-          name: '/image/[name].[ext]',
-        },
-      },
-      {
-        test: /\.(jpe?g|png)$/i,
         type: 'asset/resource',
+        generator: { filename: 'image/[name][ext]' }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
+        generator: { filename: 'font/[name][ext]' }
       },
     ]
   },
