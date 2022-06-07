@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, "src", "index.js"),
@@ -34,7 +35,7 @@ module.exports = {
         generator: { filename: 'image/[name][ext]' }
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        test: /font.*\.+(woff|woff2|eot|ttf|otf|svg)$/i,
         type: 'asset/resource',
         generator: { filename: 'font/[name][ext]' }
       },
@@ -55,6 +56,23 @@ module.exports = {
     minimize: true,
     minimizer: [
       new CssMinimizerPlugin(),
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.imageminMinify,
+          options: {
+            plugins: ['imagemin-pngquant'],
+          },
+        },
+        generator: [
+          {
+            preset: "webp",
+            implementation: ImageMinimizerPlugin.imageminGenerate,
+            options: {
+              plugins: ["imagemin-webp"],
+            },
+          },
+        ],
+      })
     ]
   }
 }

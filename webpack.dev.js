@@ -1,12 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, "src", "index.js"),
   mode: 'development',
   devtool: 'eval-source-map',
   output: {
-    path: path.join(__dirname, "public"),
+    path: path.join(__dirname, "public_dev"),
     filename: "[name].js",
     clean: true,
   },
@@ -33,7 +35,7 @@ module.exports = {
         generator: { filename: 'image/[name][ext]' }
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        test: /font.*\.+(woff|woff2|eot|ttf|otf|svg)$/i,
         type: 'asset/resource',
         generator: { filename: 'font/[name][ext]' }
       },
@@ -44,6 +46,15 @@ module.exports = {
       title: 'Development',
       filename: "index.html",
       template: path.join(__dirname, "src", "index.html"),
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+    }),
+    new StylelintPlugin({
+      context: 'src',
+      files: ['**/*.css'],
+      emitWarning: false,
+      emitError: false
     })
   ],
   devServer: {
