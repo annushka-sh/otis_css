@@ -30,7 +30,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpe?g|png)$/i,
+        test: /\.(jpe?g|png|webp)$/i,
         type: 'asset/resource',
         generator: { filename: 'image/[name][ext]' }
       },
@@ -62,16 +62,7 @@ module.exports = {
           options: {
             plugins: ['imagemin-pngquant'],
           },
-        },
-        generator: [
-          {
-            preset: "webp",
-            implementation: ImageMinimizerPlugin.imageminGenerate,
-            options: {
-              plugins: ["imagemin-webp"],
-            },
-          },
-        ],
+        }
       })
     ]
   }
